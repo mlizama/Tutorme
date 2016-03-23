@@ -8,14 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
     override func viewDidLoad() {
+        username.delegate = self;
+        password.delegate = self;
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blackColor();
+        //self.view.backgroundColor = UIColor.grayColor();
+
         //set the password text entry to show *'s instead of text
         password.secureTextEntry = true;
     }
@@ -108,12 +112,17 @@ class ViewController: UIViewController {
                     //the user that signed in is a tutor
                     if(tutor == 1)
                     {
-                        self.performSegueWithIdentifier("Tutor", sender:sender)
+                        user_name = dataToReturn["name"].stringValue;
+                        //self.performSegueWithIdentifier("Tutor", sender:sender)
+                        self.performSegueWithIdentifier("tutorTabController", sender:sender)
+
                     }
                     //else the user that signed in is not a tutor
                     else
                     {
-                        self.performSegueWithIdentifier("Tutee", sender:sender)
+                        user_name = dataToReturn["name"].stringValue;
+                        //self.performSegueWithIdentifier("Tutee", sender:sender)
+                        self.performSegueWithIdentifier("barController", sender:sender)
 
                     }
                 }
@@ -135,6 +144,25 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == username
+        {
+            //username.becomeFirstResponder()
+            username.resignFirstResponder();
+        }
+        else if textField == password
+        {
+            password.resignFirstResponder();
+        }
+        return true
+    }
+    
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
 
 }
 

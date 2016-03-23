@@ -13,6 +13,8 @@ class signUpController: UIViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     override func viewDidLoad() {
+        self.view.backgroundColor = UIColor.grayColor();
+
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

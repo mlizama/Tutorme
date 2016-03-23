@@ -10,10 +10,18 @@ import UIKit
 
 class TuteeViewController: UIViewController {
 
+    @IBOutlet weak var welcomeMessage: UILabel!
     @IBAction func signOut(sender: AnyObject) {
         self.performSegueWithIdentifier("backTutee", sender:sender)
     }
     override func viewDidLoad() {
+        //self.view.backgroundColor = UIColor.blackColor();
+        self.view.backgroundColor = UIColor.grayColor();
+
+        var welcome = user_name;
+        welcome += " ";
+        welcome += welcomeMessage.text!;
+        welcomeMessage.text = welcome;
         super.viewDidLoad()
 
  

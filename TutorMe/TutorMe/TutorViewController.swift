@@ -9,13 +9,19 @@
 import UIKit
 
 class TutorViewController: UIViewController {
-    @IBOutlet weak var welcome: UILabel!
+    @IBOutlet weak var welcomMessage: UILabel!
     @IBAction func signOut(sender: AnyObject) {
         self.performSegueWithIdentifier("backTutor", sender:sender)
 
         }
     override func viewDidLoad() {
-
+        let swiftColor = UIColor(red: 24, green: 116, blue: 205, alpha: 1)
+        self.view.backgroundColor = UIColor.grayColor();
+        //24 116 205
+        var welcome = user_name;
+        welcome += " ";
+        welcome += welcomMessage.text!;
+        welcomMessage.text = welcome;
        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
