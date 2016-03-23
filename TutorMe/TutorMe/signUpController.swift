@@ -8,7 +8,7 @@
 
 import UIKit
 
-class signUpController: UIViewController {
+class signUpController: UIViewController, UITextFieldDelegate  {
 
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -66,6 +66,24 @@ class signUpController: UIViewController {
                 }
         
     }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == userName
+        {
+            //username.becomeFirstResponder()
+            userName.resignFirstResponder();
+        }
+        else if textField == password
+        {
+            password.resignFirstResponder();
+        }
+        return true
+    }
+    
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
     /*
     // MARK: - Navigation
 
