@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2B076B3C1C858B7F001BCB17 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B076B391C858B7F001BCB17 /* SwiftyJSON.swift */; };
-		2B076B421C8627AC001BCB17 /* singIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B076B411C8627AC001BCB17 /* singIn.png */; };
 		2B07FB311C8E1BCE006077ED /* TutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07FB301C8E1BCE006077ED /* TutorViewController.swift */; };
 		2B07FB331C8EA42F006077ED /* TuteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07FB321C8EA42F006077ED /* TuteeViewController.swift */; };
 		2B0B7D1A1C92B27B00BB2BCC /* signUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0B7D191C92B27B00BB2BCC /* signUpController.swift */; };
@@ -20,6 +19,7 @@
 		2B0EC0021C84E38500243EC6 /* TutorMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0011C84E38500243EC6 /* TutorMeTests.swift */; };
 		2B0EC00D1C84E38500243EC6 /* TutorMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC00C1C84E38500243EC6 /* TutorMeUITests.swift */; };
 		2B7C3E5C1C8EACFF00806E77 /* defaultUser.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C3E5B1C8EACFF00806E77 /* defaultUser.png */; };
+		2B9EAF731CE04B0700E7B0C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */; };
 		2BFEBF5B1CA1C88D004943CF /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBF5A1CA1C88D004943CF /* Global.swift */; };
 		2BFEBFA11CA24E8C004943CF /* CalendarTutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFA01CA24E8C004943CF /* CalendarTutorViewController.swift */; };
 		2BFEBFA61CA25872004943CF /* FSCalendar in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEBFA51CA25872004943CF /* FSCalendar */; };
@@ -38,6 +38,9 @@
 		2BFEC0051CA25BE2004943CF /* NSDate+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFF41CA25BE2004943CF /* NSDate+FSExtension.m */; };
 		2BFEC0061CA25BE2004943CF /* NSString+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFF61CA25BE2004943CF /* NSString+FSExtension.m */; };
 		2BFEC0071CA25BE2004943CF /* UIView+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFF81CA25BE2004943CF /* UIView+FSExtension.m */; };
+		2BFEC0151CA3CBC5004943CF /* signout.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEC0141CA3CBC5004943CF /* signout.png */; };
+		2BFEC0171CA3CBD4004943CF /* signin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEC0161CA3CBD4004943CF /* signin.png */; };
+		2BFEC0191CA3CBE7004943CF /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEC0181CA3CBE7004943CF /* signup.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +62,6 @@
 
 /* Begin PBXFileReference section */
 		2B076B391C858B7F001BCB17 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		2B076B411C8627AC001BCB17 /* singIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = singIn.png; path = TutorMe/singIn.png; sourceTree = "<group>"; };
 		2B07FB301C8E1BCE006077ED /* TutorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorViewController.swift; sourceTree = "<group>"; };
 		2B07FB321C8EA42F006077ED /* TuteeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuteeViewController.swift; sourceTree = "<group>"; };
 		2B0B7D191C92B27B00BB2BCC /* signUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = signUpController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		2B0EC00C1C84E38500243EC6 /* TutorMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorMeUITests.swift; sourceTree = "<group>"; };
 		2B0EC00E1C84E38500243EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B7C3E5B1C8EACFF00806E77 /* defaultUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultUser.png; sourceTree = "<group>"; };
+		2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		2BFEBF5A1CA1C88D004943CF /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		2BFEBF5D1CA24763004943CF /* TutorMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TutorMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		2BFEBFA01CA24E8C004943CF /* CalendarTutorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTutorViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +115,9 @@
 		2BFEBFF61CA25BE2004943CF /* NSString+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FSExtension.m"; path = "FSCalendar/NSString+FSExtension.m"; sourceTree = "<group>"; };
 		2BFEBFF71CA25BE2004943CF /* UIView+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FSExtension.h"; path = "FSCalendar/UIView+FSExtension.h"; sourceTree = "<group>"; };
 		2BFEBFF81CA25BE2004943CF /* UIView+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FSExtension.m"; path = "FSCalendar/UIView+FSExtension.m"; sourceTree = "<group>"; };
+		2BFEC0141CA3CBC5004943CF /* signout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signout.png; sourceTree = "<group>"; };
+		2BFEC0161CA3CBD4004943CF /* signin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin.png; sourceTree = "<group>"; };
+		2BFEC0181CA3CBE7004943CF /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +148,10 @@
 		2B0EBFE01C84E38500243EC6 = {
 			isa = PBXGroup;
 			children = (
-				2B076B411C8627AC001BCB17 /* singIn.png */,
 				2B7C3E5B1C8EACFF00806E77 /* defaultUser.png */,
+				2BFEC0141CA3CBC5004943CF /* signout.png */,
+				2BFEC0161CA3CBD4004943CF /* signin.png */,
+				2BFEC0181CA3CBE7004943CF /* signup.png */,
 				2B0EBFEB1C84E38500243EC6 /* TutorMe */,
 				2B0EC0001C84E38500243EC6 /* TutorMeTests */,
 				2B0EC00B1C84E38500243EC6 /* TutorMeUITests */,
@@ -201,6 +209,7 @@
 				2B0EBFEC1C84E38500243EC6 /* AppDelegate.swift */,
 				2B0EBFEE1C84E38500243EC6 /* ViewController.swift */,
 				2B07FB301C8E1BCE006077ED /* TutorViewController.swift */,
+				2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */,
 				2B0B7D191C92B27B00BB2BCC /* signUpController.swift */,
 				2B076B391C858B7F001BCB17 /* SwiftyJSON.swift */,
 				2B07FB321C8EA42F006077ED /* TuteeViewController.swift */,
@@ -342,11 +351,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BFEC0171CA3CBD4004943CF /* signin.png in Resources */,
+				2BFEC0191CA3CBE7004943CF /* signup.png in Resources */,
 				2B7C3E5C1C8EACFF00806E77 /* defaultUser.png in Resources */,
 				2BFEBFA61CA25872004943CF /* FSCalendar in Resources */,
 				2B0EBFF71C84E38500243EC6 /* LaunchScreen.storyboard in Resources */,
-				2B076B421C8627AC001BCB17 /* singIn.png in Resources */,
 				2B0EBFF41C84E38500243EC6 /* Assets.xcassets in Resources */,
+				2BFEC0151CA3CBC5004943CF /* signout.png in Resources */,
 				2B0EBFF21C84E38500243EC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +401,7 @@
 				2BFEC0061CA25BE2004943CF /* NSString+FSExtension.m in Sources */,
 				2B0EBFED1C84E38500243EC6 /* AppDelegate.swift in Sources */,
 				2BFEBFFC1CA25BE2004943CF /* FSCalendarAnimator.m in Sources */,
+				2B9EAF731CE04B0700E7B0C9 /* SearchViewController.swift in Sources */,
 				2BFEC0031CA25BE2004943CF /* FSCalendarHeader.m in Sources */,
 				2BFEC0011CA25BE2004943CF /* FSCalendarEventIndicator.m in Sources */,
 				2BFEC0051CA25BE2004943CF /* NSDate+FSExtension.m in Sources */,

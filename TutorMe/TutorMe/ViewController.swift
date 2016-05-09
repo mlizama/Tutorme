@@ -17,7 +17,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         username.delegate = self;
         password.delegate = self;
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blackColor();
+        //let swiftColor = UIColor(red: 24, green: 116, blue: 205, alpha: 1)
+        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
         //self.view.backgroundColor = UIColor.grayColor();
 
         //set the password text entry to show *'s instead of text
@@ -33,43 +34,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         self.performSegueWithIdentifier("signUp", sender:sender)
 
-        
-//        let username = self.username.text;
-//        let password = self.password.text;
-//        
-//        let url: NSURL = NSURL(string: "http://default-environment.s4mivgjgvz.us-east-1.elasticbeanstalk.com/signup.php")!
-//        let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
-//        var body = "";
-//        body += "name=";
-//        body += username!;
-//        body += "&";
-//        body += "pass=";
-//        body += password!;
-//        let bodyData = body;
-//        
-//        request.HTTPMethod = "POST"
-//        
-//        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
-//        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
-//            {
-//                (response, data, error) in
-//                
-//                //print(data)
-//                if let HTTPResponse = response as? NSHTTPURLResponse {
-//                    let statusCode = HTTPResponse.statusCode
-//                    
-//                    if statusCode == 200 {
-//                        let dataToReturn = JSON(data: data!)
-//                        print("http status code = 200");
-//                        //do something if the json returned is not empty
-//                        if(!dataToReturn.isEmpty)
-//                        {
-//                            print(dataToReturn);
-//                            
-//                        }
-//                    }
-//                }    
-//        }
         
 
         
@@ -113,6 +77,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     if(tutor == 1)
                     {
                         user_name = dataToReturn["name"].stringValue;
+                        user_id = Int(dataToReturn["idUser"].stringValue)!;
                         //self.performSegueWithIdentifier("Tutor", sender:sender)
                         self.performSegueWithIdentifier("tutorTabController", sender:sender)
 

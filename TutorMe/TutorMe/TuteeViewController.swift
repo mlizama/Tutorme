@@ -16,7 +16,7 @@ class TuteeViewController: UIViewController {
     }
     override func viewDidLoad() {
         //self.view.backgroundColor = UIColor.blackColor();
-        self.view.backgroundColor = UIColor.grayColor();
+        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
 
         var welcome = user_name;
         welcome += " ";

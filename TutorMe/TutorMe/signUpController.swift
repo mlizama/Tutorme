@@ -13,7 +13,7 @@ class signUpController: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor.grayColor();
+        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
 
         super.viewDidLoad()
 
@@ -59,6 +59,7 @@ class signUpController: UIViewController, UITextFieldDelegate  {
                                 if(!dataToReturn.isEmpty)
                                 {
                                     print(dataToReturn);
+                                    self.performSegueWithIdentifier("signUpBack", sender:sender);
                                     
                                 }
                             }
