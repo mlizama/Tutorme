@@ -10,3 +10,4 @@ import Foundation
 
 var  user_name = "";
 var user_id = 0;
+var tutor_id = 0;

@@ -10,6 +10,7 @@ import UIKit
 
 class TuteeViewController: UIViewController {
 
+    @IBOutlet var status: UILabel!
     @IBOutlet weak var welcomeMessage: UILabel!
     @IBAction func signOut(sender: AnyObject) {
         self.performSegueWithIdentifier("backTutee", sender:sender)
@@ -18,8 +19,14 @@ class TuteeViewController: UIViewController {
         //self.view.backgroundColor = UIColor.blackColor();
         self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
 
-        var welcome = user_name;
+        self.status.text = "Status: Tutee"
+        
+        welcomeMessage.text = ""
+        
+        var welcome = "Welcome ";
         welcome += " ";
+        welcome += user_name;
+
         welcome += welcomeMessage.text!;
         welcomeMessage.text = welcome;
         super.viewDidLoad()

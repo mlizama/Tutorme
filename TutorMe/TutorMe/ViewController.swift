@@ -73,11 +73,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     print(dataToReturn);
                     let tutor = dataToReturn["tutor"].int64Value;
                     print(tutor);
+                    user_id = Int(dataToReturn["idUser"].stringValue)!;
+                    user_name = dataToReturn["name"].stringValue;
+
                     //the user that signed in is a tutor
                     if(tutor == 1)
                     {
-                        user_name = dataToReturn["name"].stringValue;
-                        user_id = Int(dataToReturn["idUser"].stringValue)!;
+
                         //self.performSegueWithIdentifier("Tutor", sender:sender)
                         self.performSegueWithIdentifier("tutorTabController", sender:sender)
 
@@ -85,7 +87,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     //else the user that signed in is not a tutor
                     else
                     {
-                        user_name = dataToReturn["name"].stringValue;
                         //self.performSegueWithIdentifier("Tutee", sender:sender)
                         self.performSegueWithIdentifier("barController", sender:sender)
 

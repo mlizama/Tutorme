@@ -21,3 +21,6 @@
 #import "NSString+FSExtension.h"
 #import "UIView+FSExtension.h"
 
+#import "ActionSheetStringPicker.h"
+#import "AbstractActionSheetPicker.h"
+#import "SWActionSheet.h"

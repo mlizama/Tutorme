@@ -8,15 +8,72 @@
 
 import UIKit
 
-class CalendarTutorViewController: UIViewController, FSCalendarDelegate , UITableViewDelegate, UITableViewDataSource{
+class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource , UITableViewDelegate, UITableViewDataSource{
     //private weak var calendar: FSCalendar!
 
     var data: [String] = [""]
+    var dates: [String] = [""]
+    var  dictionary: [String:Int]! = [:]
 
     
+    @IBOutlet var goBack: UIButton!
     @IBOutlet var table: UITableView!
+    
+    @IBAction func `return`(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     @IBOutlet weak var calendar: FSCalendar!
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
+        self.goBack.backgroundColor = UIColor.whiteColor()
+        //self.dismissViewControllerAnimated(true, completion: nil)
+        self.calendar.dataSource = self
+
+        ////
+        
+        let url: NSURL = NSURL(string: "http://default-environment.s4mivgjgvz.us-east-1.elasticbeanstalk.com/days.php")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
+        var body = "";
+        body += "id=";
+        body += String(tutor_id);
+        let bodyData = body;
+        
+        request.HTTPMethod = "POST"
+        
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                
+                //print(data)
+                if let HTTPResponse = response as? NSHTTPURLResponse {
+                    let statusCode = HTTPResponse.statusCode
+                    
+                    if statusCode == 200 {
+                        let dataToReturn = JSON(data: data!)
+                        print("http status code = 200");
+                        //do something if the json returned is not empty
+                        if(!dataToReturn.isEmpty)
+                        {
+                            for i in 0..<dataToReturn.count
+                            {
+                                
+                                self.dates.append((dataToReturn[i])["Date"].stringValue)
+                                print(self.dates)
+                            }
+                            print(dataToReturn);
+
+                            self.calendar.reloadData()
+                        }
+                    }
+                }
+        }
+        
+
+
+        ////
+        
         
         self.table.layer.cornerRadius = 10
         self.table.delegate = self
@@ -27,10 +84,11 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate , UITabl
         self.calendar.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
         self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
         self.calendar.delegate = self;
-        super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
@@ -65,7 +123,8 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate , UITabl
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         var body = "";
         body += "userid=";
-        body += String(user_id);
+        //body += String(user_id);
+        body += String(tutor_id)
         body += "&";
         body += "date=";
         body += dates;
@@ -118,16 +177,16 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate , UITabl
                                             //do something if the json returned is not empty
                                             if(!dataToReturn.isEmpty)
                                             {
+                                                self.dictionary.removeAll()
                                                 print(dataToReturn);
                                                 for i in 0..<dataToReturn.count
                                                 {
                                                     var sess = "";
                                                     sess += "Session Time: "
                                                     sess += self.getHour((dataToReturn[i])["Hour"].stringValue);
+                                                    self.dictionary[sess] = Int((dataToReturn[i])["idSessionBlock"].stringValue)
                                                     self.data.append(sess)
-                                                    //(returnedJSON[size])["title"]
                                                 }
-                                                
                                                 self.table.reloadData()
                                             }
                                             else
@@ -167,6 +226,7 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate , UITabl
         let cell:UITableViewCell = self.table.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         
         cell.textLabel?.text = self.data[indexPath.row]
+
         
         return cell
     }
@@ -174,8 +234,80 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate , UITabl
     func tableView(tableView: UITableView,didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //this code segment is ran when you select a cell
         print("\(indexPath.row)")
-        //data.append("1")
-        //table.reloadData()
+        let indexPath = tableView.indexPathForSelectedRow
+        let currentCell = tableView.cellForRowAtIndexPath(indexPath!)! as UITableViewCell
+
+        let alert = UIAlertController(title: currentCell.textLabel!.text!, message:"Sign up for this slot?", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "YES", style: .Default) { _ in
+            //code executed when user taps ok
+            
+            let url: NSURL = NSURL(string: "http://default-environment.s4mivgjgvz.us-east-1.elasticbeanstalk.com/takeSession.php")!
+            let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
+            var body = "";
+            body += "tutee=";
+            body += String(user_id);
+            body += "&sessId="
+            body += String(self.dictionary[currentCell.textLabel!.text!]!)
+            let bodyData = body;
+            
+            print("++++++++++++++++++++")
+            print(user_id)
+            print(String(self.dictionary[currentCell.textLabel!.text!]!))
+            print(body)
+            print("++++++++++++++++++++")
+
+            
+            request.HTTPMethod = "POST"
+            
+            request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+                {
+                    (response, data, error) in
+                    
+                    //print(data)
+                    if let HTTPResponse = response as? NSHTTPURLResponse {
+                        let statusCode = HTTPResponse.statusCode
+                        
+                        if statusCode == 200 {
+                            let dataToReturn = JSON(data: data!)
+                            print("http status code = 200");
+                            //do something if the json returned is not empty
+                            if(!dataToReturn.isEmpty)
+                            {
+                                print(dataToReturn);
+                                
+                                let alert3 = UIAlertController(title: currentCell.textLabel!.text!, message:"Successfully Signed Up!", preferredStyle: .Alert)
+                                let action3 = UIAlertAction(title: "OK", style: .Default) { _ in
+                                    //code executed when user taps ok
+                                }
+                                alert3.addAction(action3)
+                                self.presentViewController(alert3, animated: true){}
+
+                            }
+                            else
+                            {
+                                
+                                let alert4 = UIAlertController(title: currentCell.textLabel!.text!, message:"Failed To Sign Up!", preferredStyle: .Alert)
+                                let action4 = UIAlertAction(title: "OK", style: .Default) { _ in
+                                    //code executed when user taps ok
+                                }
+                                alert4.addAction(action4)
+                                self.presentViewController(alert4, animated: true){}
+                                print("empty")
+                            }
+                        }
+                    }
+            }
+
+         
+        }
+        let action2 = UIAlertAction(title: "NO", style: .Default) { _ in
+            //code executed when user taps ok
+            
+        }
+        alert.addAction(action)
+        alert.addAction(action2)
+        self.presentViewController(alert, animated: true){}
         
     }
     
@@ -196,21 +328,36 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate , UITabl
         else if(hour == "10"){ return " 10 am";}
         else if(hour == "11"){ return " 11 am";}
         else if(hour == "12"){ return " 12 pm";}
-        else if(hour == "13"){ return " 1 am";}
-        else if(hour == "14"){ return " 2 am";}
-        else if(hour == "15"){ return " 3 am";}
-        else if(hour == "16"){ return " 4 am";}
-        else if(hour == "17"){ return " 5 am";}
-        else if(hour == "18"){ return " 6 am";}
-        else if(hour == "19"){ return " 7 am";}
-        else if(hour == "20"){ return " 8 am";}
-        else if(hour == "21"){ return " 9 am";}
-        else if(hour == "22"){ return " 10 am";}
-        else if(hour == "23"){ return " 11 am";}
+        else if(hour == "13"){ return " 1 pm";}
+        else if(hour == "14"){ return " 2 pm";}
+        else if(hour == "15"){ return " 3 pm";}
+        else if(hour == "16"){ return " 4 pm";}
+        else if(hour == "17"){ return " 5 pm";}
+        else if(hour == "18"){ return " 6 pm";}
+        else if(hour == "19"){ return " 7 pm";}
+        else if(hour == "20"){ return " 8 pm";}
+        else if(hour == "21"){ return " 9 pm";}
+        else if(hour == "22"){ return " 10 pm";}
+        else if(hour == "23"){ return " 11 pm";}
         else if(hour == "24"){ return " 12 am";}
         else {return "error"}
 
         //return greeting
+    }
+    
+    func calendar(calendar: FSCalendar!, hasEventForDate date: NSDate!) -> Bool {
+        //print(date.)
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.stringFromDate(date)
+
+        if(dates.contains(dateString) )
+        {
+            return true
+        }
+        else{
+        return false
+        }
     }
 }
 
