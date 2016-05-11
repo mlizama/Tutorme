@@ -13,9 +13,22 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
     @IBOutlet var searchCourse: UIButton!
     @IBOutlet var nameButton: UITextField!
     var  dictionary: [String:Int] = [:]
-    
-    @IBAction func changed(sender: AnyObject) {
+    var data: [String] = [""]
+    var courses: [String] = ["CSCI 100","CSCI 101","CSCI 102","CSCI 111","CSCI 111X","CSCI 144",
+                                "CSCI 198","CSCI 211","CSCI 211X","CSCI 217","CSCI 221","CSCI 221X",
+                                "CSCI 301","CSCI 311","CSCI 311X","CSCI 313H","CSCI 315","CSCI 340",
+                                "CSCI 344","CSCI 346","CSCI 380","CSCI 381","CSCI 381","CSCI 389",
+                                "CSCI 398","CSCI 400","CSCI 430","CSCI 431","CSCI 444","CSCI 490",
+                                "CSCI 498","CSCI 499","CSCI 499H","CSCI 511","CSCI 515","CSCI 533",
+                                "CSCI 540","CSCI 546","CSCI 547","CSCI 550","CSCI 551","CSCI 566",
+                                "CSCI 567","CSCI 568","CSCI 569","CSCI 580","CSCI 583","CSCI 585",
+                                "CSCI 598","CSCI 611",];
 
+    @IBAction func changed(sender: AnyObject) {
+        if(self.data.isEmpty == false){
+            let index = self.table.indexPathsForVisibleRows
+            self.table.cellForRowAtIndexPath(index![0])?.textLabel?.textColor = UIColor.blackColor()
+        }
         var name = nameButton.text
         if(name != ""){
         let url: NSURL = NSURL(string: "http://default-environment.s4mivgjgvz.us-east-1.elasticbeanstalk.com/name.php")!
@@ -75,24 +88,16 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
             self.data.removeAll()
             self.table.reloadData()
         }
-        
-
+       
     }
     
-        var data: [String] = [""]
-        var courses: [String] = ["CSCI 100","CSCI 101","CSCI 102","CSCI 111","CSCI 111X","CSCI 144",
-                                "CSCI 198","CSCI 211","CSCI 211X","CSCI 217","CSCI 221","CSCI 221X",
-                                "CSCI 301","CSCI 311","CSCI 311X","CSCI 313H","CSCI 315","CSCI 340",
-                                "CSCI 344","CSCI 346","CSCI 380","CSCI 381","CSCI 381","CSCI 389",
-                                "CSCI 398","CSCI 400","CSCI 430","CSCI 431","CSCI 444","CSCI 490",
-                                "CSCI 498","CSCI 499","CSCI 499H","CSCI 511","CSCI 515","CSCI 533",
-                                "CSCI 540","CSCI 546","CSCI 547","CSCI 550","CSCI 551","CSCI 566",
-                                "CSCI 567","CSCI 568","CSCI 569","CSCI 580","CSCI 583","CSCI 585",
-                                "CSCI 598","CSCI 611",];
-
+    
     @IBAction func t(sender: AnyObject) {
         self.nameButton.endEditing(true)
-
+        if(self.data.isEmpty == false){
+            let index = self.table.indexPathsForVisibleRows
+            self.table.cellForRowAtIndexPath(index![0])?.textLabel?.textColor = UIColor.blackColor()
+        }
         ActionSheetStringPicker.showPickerWithTitle("choose course", rows: courses, initialSelection: 0, doneBlock:{
             picker, selectedIndex, selectedValue in
             
@@ -145,6 +150,14 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
 
 
                             }
+                            if(self.data.isEmpty)
+                            {
+                                self.data.append("No tutors found")
+                                self.table.reloadData()
+                                
+                                let index = self.table.indexPathsForVisibleRows
+                                self.table.cellForRowAtIndexPath(index![0])?.textLabel?.textColor = UIColor.redColor()
+                            }
                         }
                     }
             }
@@ -164,6 +177,7 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.data.removeAll()
         self.nameButton.delegate = self
         self.searchCourse.backgroundColor = UIColor.whiteColor()
         self.searchCourse.layer.cornerRadius = 10
@@ -204,12 +218,13 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
         let currentCell = tableView.cellForRowAtIndexPath(indexPath!)! as UITableViewCell
         print(currentCell.textLabel!.text!)
 
+        if(!currentCell.textLabel!.text!.isEmpty){
         tutor_id = self.dictionary[currentCell.textLabel!.text!]!
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("calendar") as! CalendarTutorViewController
         //let navController = UINavigationController(rootViewController: vc) // Creating a navigation controller with VC1 at the root of the navigation stack.
         
         self.presentViewController(vc, animated:true, completion: nil)        //self.presentViewController(vc, animated: true, completion: nil)
-
+        }
         //data.append("1")
         //table.reloadData()
         

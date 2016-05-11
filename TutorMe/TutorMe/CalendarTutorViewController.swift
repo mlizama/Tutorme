@@ -26,17 +26,44 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.data.removeAll()
         self.goBack.backgroundColor = UIColor.whiteColor()
         //self.dismissViewControllerAnimated(true, completion: nil)
         self.calendar.dataSource = self
+        
+        
+        self.table.layer.cornerRadius = 10
+        self.table.delegate = self
+        self.table.dataSource = self
+        self.table.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        
+        self.calendar.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        self.calendar.delegate = self;
 
-        ////
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+  
+        if(Bool(is_tutor))
+        {
+            self.goBack.hidden = true
+        }
         
         let url: NSURL = NSURL(string: "http://default-environment.s4mivgjgvz.us-east-1.elasticbeanstalk.com/days.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         var body = "";
         body += "id=";
-        body += String(tutor_id);
+        if(Bool(is_tutor))
+        {
+            body += String(tutor_id);
+        }
+        else{
+            body += String(user_id);
+        }
         let bodyData = body;
         
         request.HTTPMethod = "POST"
@@ -58,37 +85,19 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
                         {
                             for i in 0..<dataToReturn.count
                             {
-                                
+                                //fix here
                                 self.dates.append((dataToReturn[i])["Date"].stringValue)
                                 print(self.dates)
                             }
                             print(dataToReturn);
-
+                            
                             self.calendar.reloadData()
                         }
                     }
                 }
         }
-        
 
-
-        ////
-        
-        
-        self.table.layer.cornerRadius = 10
-        self.table.delegate = self
-        self.table.dataSource = self
-        self.table.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        
-        self.calendar.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
-        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
-        self.calendar.delegate = self;
-
-        // Do any additional setup after loading the view.
     }
-    
-    
 
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
@@ -103,6 +112,7 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
     
     // FSCalendarDelegate called when user selects a date
     func calendar(calendar: FSCalendar!, didSelectDate date: NSDate!) {
+        self.dictionary.removeAll()
         self.data.removeAll()
         self.table.reloadData()
         let calendar = NSCalendar.currentCalendar()
@@ -124,7 +134,9 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
         var body = "";
         body += "userid=";
         //body += String(user_id);
+        
         body += String(tutor_id)
+        
         body += "&";
         body += "date=";
         body += dates;
@@ -188,19 +200,23 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
                                                     self.data.append(sess)
                                                 }
                                                 self.table.reloadData()
+                                                self.calendar.reloadData()
+
                                             }
                                             else
                                             {
-                                                
+                                                self.dictionary.removeAll()
+                                                self.calendar.reloadData()
+
+
                                             }
                                         }
                                     }    
                             }
 
-                            
+                            self.reloadDates()
 
-                            
-                            //-----------------
+
                             
                         }
                         else
@@ -209,12 +225,10 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
                         }
                     }
                 }
-                
-                /////////
 
-                
-                /////
         }
+        
+
         
     }
     
@@ -282,6 +296,9 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
                                 }
                                 alert3.addAction(action3)
                                 self.presentViewController(alert3, animated: true){}
+                                var index = self.data.indexOf(currentCell.textLabel!.text!)
+                                self.data.removeAtIndex(index!)
+                                self.table.reloadData()
 
                             }
                             else
@@ -308,6 +325,9 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
         alert.addAction(action)
         alert.addAction(action2)
         self.presentViewController(alert, animated: true){}
+        
+        self.calendar.reloadData()
+
         
     }
     
@@ -358,6 +378,54 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
         else{
         return false
         }
+    }
+    
+    func reloadDates() -> Void{
+        print("@@@@@@@@@@@@@@@@@@@@@@@@@")
+        print(dates)
+        self.dates.removeAll()
+        print(dates)
+        print("@@@@@@@@@@@@@@@@@@@@@@@@@")
+
+        let url: NSURL = NSURL(string: "http://default-environment.s4mivgjgvz.us-east-1.elasticbeanstalk.com/days.php")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
+        var body = "";
+        body += "id=";
+        body += String(tutor_id);
+        let bodyData = body;
+        
+        request.HTTPMethod = "POST"
+        
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                
+                //print(data)
+                if let HTTPResponse = response as? NSHTTPURLResponse {
+                    let statusCode = HTTPResponse.statusCode
+                    
+                    if statusCode == 200 {
+                        let dataToReturn = JSON(data: data!)
+                        print("http status code = 200");
+                        //do something if the json returned is not empty
+                        if(!dataToReturn.isEmpty)
+                        {
+                            for i in 0..<dataToReturn.count
+                            {
+                                //fix here
+                                self.dates.append((dataToReturn[i])["Date"].stringValue)
+                                print(self.dates)
+                            }
+                            print(dataToReturn);
+                            
+                            self.calendar.reloadData()
+                        }
+                    }
+                }
+        }
+
+        
     }
 }
 
