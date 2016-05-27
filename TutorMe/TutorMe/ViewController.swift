@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet var password: TJTextField!
+    @IBOutlet var username: TJTextField!
     
     override func viewDidLoad() {
         username.delegate = self;
         password.delegate = self;
         super.viewDidLoad()
+        self.username.backgroundColor =  UIColor.clearColor()
+        self.username.tintColor = UIColor.blackColor()
+        self.password.tintColor = UIColor.blackColor()
+
         //let swiftColor = UIColor(red: 24, green: 116, blue: 205, alpha: 1)
-        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+        //self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
         //self.view.backgroundColor = UIColor.grayColor();
 
         //set the password text entry to show *'s instead of text
@@ -100,7 +106,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }
                 else
                 {
-                    let alert = UIAlertController(title: "Sorry!", message:"Wrong username/password try again", preferredStyle: .Alert)
+                    SCLAlertView().showError("Please Try Again", subTitle: "Wrong user name or password")
+
+                    /*let alert = UIAlertController(title: "Sorry!", message:"Wrong username/password try again", preferredStyle: .Alert)
                     let action = UIAlertAction(title: "OK", style: .Default) { _ in
                         //code executed when user taps ok
                         self.password.text = "";
@@ -108,6 +116,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     }
                     alert.addAction(action)
                     self.presentViewController(alert, animated: true){}
+                     */
+                    
 
                 }
             }

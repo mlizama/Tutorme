@@ -30,6 +30,7 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
         self.data.removeAll()
         self.goBack.backgroundColor = UIColor.whiteColor()
         //self.dismissViewControllerAnimated(true, completion: nil)
+       // self.table.backgroundColor = UIColor.clearColor()
         self.calendar.dataSource = self
         
         
@@ -39,8 +40,11 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
         self.table.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         
-        self.calendar.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
-        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        //self.calendar.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        self.calendar.backgroundColor = UIColor.clearColor()   
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+
+        //self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
         self.calendar.delegate = self;
 
         // Do any additional setup after loading the view.
@@ -57,13 +61,7 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         var body = "";
         body += "id=";
-        if(Bool(is_tutor))
-        {
-            body += String(tutor_id);
-        }
-        else{
-            body += String(user_id);
-        }
+        body += String(tutor_id);
         let bodyData = body;
         
         request.HTTPMethod = "POST"
@@ -262,6 +260,8 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
             body += String(user_id);
             body += "&sessId="
             body += String(self.dictionary[currentCell.textLabel!.text!]!)
+            body += "&name="
+            body += user_name
             let bodyData = body;
             
             print("++++++++++++++++++++")

@@ -15,7 +15,9 @@ class TutorViewController: UIViewController {
 
         }
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+
+        //self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
         //24 116 205
         var welcome = user_name;
         welcome += " ";

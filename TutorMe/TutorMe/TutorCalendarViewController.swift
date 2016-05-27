@@ -24,7 +24,6 @@ class TutorCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         self.data.removeAll()
         
         self.tabBarController!.delegate = self
-        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
         self.table.layer.cornerRadius = 10
         self.table.delegate = self
         self.table.dataSource = self
@@ -32,7 +31,8 @@ class TutorCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
         
         self.calendar.delegate = self
         self.calendar.dataSource = self
-        self.calendar.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        self.calendar.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         
 
 
@@ -176,7 +176,10 @@ class TutorCalendarViewController: UIViewController, FSCalendarDelegate, FSCalen
                             
                             for i in 0..<dataToReturn.count
                             {
-                                var compose = "You have a session with at "
+                                var compose = "Session with "
+                                var name = (dataToReturn[i])["Tuteename"].stringValue
+                                compose += name
+                                compose += " at "
                                 compose += self.getHour((dataToReturn[i])["Hour"].stringValue)
                                 self.data.append(compose)
                             }

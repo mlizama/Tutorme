@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17BD6A4AB1520D6F28879A50 /* Pods_TutorMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB384A3C0BC7CE18D6035131 /* Pods_TutorMe.framework */; };
 		2B076B3C1C858B7F001BCB17 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B076B391C858B7F001BCB17 /* SwiftyJSON.swift */; };
 		2B07FB311C8E1BCE006077ED /* TutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07FB301C8E1BCE006077ED /* TutorViewController.swift */; };
 		2B07FB331C8EA42F006077ED /* TuteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07FB321C8EA42F006077ED /* TuteeViewController.swift */; };
@@ -18,13 +19,20 @@
 		2B0EBFF71C84E38500243EC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0EBFF51C84E38500243EC6 /* LaunchScreen.storyboard */; };
 		2B0EC0021C84E38500243EC6 /* TutorMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0011C84E38500243EC6 /* TutorMeTests.swift */; };
 		2B0EC00D1C84E38500243EC6 /* TutorMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC00C1C84E38500243EC6 /* TutorMeUITests.swift */; };
+		2B75142D1CF6301B00DBFA80 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B75142C1CF6301B00DBFA80 /* SWActionSheet.m */; };
 		2B7C3E5C1C8EACFF00806E77 /* defaultUser.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C3E5B1C8EACFF00806E77 /* defaultUser.png */; };
+		2B821F431CF15AB900D88025 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B821F421CF15AB900D88025 /* logo.png */; };
 		2B9EAF731CE04B0700E7B0C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */; };
 		2B9EAF821CE092F400E7B0C9 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EAF811CE092F400E7B0C9 /* AbstractActionSheetPicker.m */; };
 		2B9EAF851CE0930B00E7B0C9 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EAF841CE0930B00E7B0C9 /* ActionSheetStringPicker.m */; };
-		2B9EAF881CE0935800E7B0C9 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EAF871CE0935800E7B0C9 /* SWActionSheet.m */; };
+		2BB913291CEEDCF2002AF333 /* SCLAlertView in Resources */ = {isa = PBXBuildFile; fileRef = 2BB913281CEEDCF2002AF333 /* SCLAlertView */; };
 		2BC866761CE2EBF500054843 /* mySessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC866751CE2EBF500054843 /* mySessionsViewController.swift */; };
 		2BC866781CE3DC7A00054843 /* TutorCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC866771CE3DC7A00054843 /* TutorCalendarViewController.swift */; };
+		2BFC31821CE50E4A00581385 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFC31811CE50E4A00581385 /* TJTextField.swift */; };
+		2BFC31841CE5170D00581385 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFC31831CE5170D00581385 /* background.png */; };
+		2BFC318A1CE518E700581385 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFC31891CE518E700581385 /* Profile.png */; };
+		2BFC318C1CE5219300581385 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFC318B1CE5219300581385 /* add.png */; };
+		2BFC318E1CE52DF000581385 /* addSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFC318D1CE52DF000581385 /* addSessionViewController.swift */; };
 		2BFEBF5B1CA1C88D004943CF /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBF5A1CA1C88D004943CF /* Global.swift */; };
 		2BFEBFA11CA24E8C004943CF /* CalendarTutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFA01CA24E8C004943CF /* CalendarTutorViewController.swift */; };
 		2BFEBFA61CA25872004943CF /* FSCalendar in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEBFA51CA25872004943CF /* FSCalendar */; };
@@ -46,6 +54,8 @@
 		2BFEC0151CA3CBC5004943CF /* signout.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEC0141CA3CBC5004943CF /* signout.png */; };
 		2BFEC0171CA3CBD4004943CF /* signin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEC0161CA3CBD4004943CF /* signin.png */; };
 		2BFEC0191CA3CBE7004943CF /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEC0181CA3CBE7004943CF /* signup.png */; };
+		4875E7A38AEBAE8386864C6E /* Pods_TutorMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2F6CBE240E63E3973A3FCC /* Pods_TutorMeUITests.framework */; };
+		FD572969DC53DD5C06992885 /* Pods_TutorMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E73224693F15E3D633380 /* Pods_TutorMeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043ADB85F6939BA711176077 /* Pods-TutorMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutorMeTests/Pods-TutorMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B076B391C858B7F001BCB17 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		2B07FB301C8E1BCE006077ED /* TutorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorViewController.swift; sourceTree = "<group>"; };
 		2B07FB321C8EA42F006077ED /* TuteeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuteeViewController.swift; sourceTree = "<group>"; };
@@ -83,16 +94,23 @@
 		2B0EC0081C84E38500243EC6 /* TutorMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0EC00C1C84E38500243EC6 /* TutorMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorMeUITests.swift; sourceTree = "<group>"; };
 		2B0EC00E1C84E38500243EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B75142B1CF6301B00DBFA80 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = "../../../../Downloads/ActionSheetPicker-3.0-master/Pickers/SWActionSheet.h"; sourceTree = "<group>"; };
+		2B75142C1CF6301B00DBFA80 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = "../../../../Downloads/ActionSheetPicker-3.0-master/Pickers/SWActionSheet.m"; sourceTree = "<group>"; };
 		2B7C3E5B1C8EACFF00806E77 /* defaultUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultUser.png; sourceTree = "<group>"; };
+		2B821F421CF15AB900D88025 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		2B9EAF801CE092E700E7B0C9 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
 		2B9EAF811CE092F400E7B0C9 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
 		2B9EAF831CE0930B00E7B0C9 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
 		2B9EAF841CE0930B00E7B0C9 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
-		2B9EAF861CE0935800E7B0C9 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
-		2B9EAF871CE0935800E7B0C9 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		2BB913281CEEDCF2002AF333 /* SCLAlertView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SCLAlertView; sourceTree = "<group>"; };
 		2BC866751CE2EBF500054843 /* mySessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mySessionsViewController.swift; path = ../mySessionsViewController.swift; sourceTree = "<group>"; };
 		2BC866771CE3DC7A00054843 /* TutorCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorCalendarViewController.swift; sourceTree = "<group>"; };
+		2BFC31811CE50E4A00581385 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJTextField.swift; sourceTree = "<group>"; };
+		2BFC31831CE5170D00581385 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		2BFC31891CE518E700581385 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
+		2BFC318B1CE5219300581385 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		2BFC318D1CE52DF000581385 /* addSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addSessionViewController.swift; sourceTree = "<group>"; };
 		2BFEBF5A1CA1C88D004943CF /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		2BFEBF5D1CA24763004943CF /* TutorMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TutorMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		2BFEBFA01CA24E8C004943CF /* CalendarTutorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTutorViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +149,14 @@
 		2BFEC0141CA3CBC5004943CF /* signout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signout.png; sourceTree = "<group>"; };
 		2BFEC0161CA3CBD4004943CF /* signin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin.png; sourceTree = "<group>"; };
 		2BFEC0181CA3CBE7004943CF /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
+		4C2F6CBE240E63E3973A3FCC /* Pods_TutorMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutorMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		508EF03078BE43EC59EAF54F /* Pods-TutorMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutorMe/Pods-TutorMe.release.xcconfig"; sourceTree = "<group>"; };
+		7D76E004FAF6C46AFDA06E1A /* Pods-TutorMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorMeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TutorMeUITests/Pods-TutorMeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9D4E73224693F15E3D633380 /* Pods_TutorMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutorMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E49615AE270E7512DEFAE38 /* Pods-TutorMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutorMeUITests/Pods-TutorMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7F4B8F901CFD31401352490 /* Pods-TutorMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutorMe/Pods-TutorMe.debug.xcconfig"; sourceTree = "<group>"; };
+		F7E209FBA6C713831B1DDE98 /* Pods-TutorMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutorMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TutorMeTests/Pods-TutorMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB384A3C0BC7CE18D6035131 /* Pods_TutorMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TutorMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BD6A4AB1520D6F28879A50 /* Pods_TutorMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD572969DC53DD5C06992885 /* Pods_TutorMeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4875E7A38AEBAE8386864C6E /* Pods_TutorMeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,10 +194,13 @@
 				2BFEC0141CA3CBC5004943CF /* signout.png */,
 				2BFEC0161CA3CBD4004943CF /* signin.png */,
 				2BFEC0181CA3CBE7004943CF /* signup.png */,
+				2B821F421CF15AB900D88025 /* logo.png */,
 				2B0EBFEB1C84E38500243EC6 /* TutorMe */,
 				2B0EC0001C84E38500243EC6 /* TutorMeTests */,
 				2B0EC00B1C84E38500243EC6 /* TutorMeUITests */,
 				2B0EBFEA1C84E38500243EC6 /* Products */,
+				FF1F01FBC9BC4063E2EA1A7C /* Pods */,
+				F2420FE7F78858B9CCEFACAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,8 +217,6 @@
 		2B0EBFEB1C84E38500243EC6 /* TutorMe */ = {
 			isa = PBXGroup;
 			children = (
-				2B9EAF861CE0935800E7B0C9 /* SWActionSheet.h */,
-				2B9EAF871CE0935800E7B0C9 /* SWActionSheet.m */,
 				2B9EAF801CE092E700E7B0C9 /* AbstractActionSheetPicker.h */,
 				2B9EAF811CE092F400E7B0C9 /* AbstractActionSheetPicker.m */,
 				2B9EAF831CE0930B00E7B0C9 /* ActionSheetStringPicker.h */,
@@ -204,6 +234,8 @@
 				2BFEBFE41CA25BE2004943CF /* FSCalendarCell.h */,
 				2BFEBFE51CA25BE2004943CF /* FSCalendarCell.m */,
 				2BFEBFE61CA25BE2004943CF /* FSCalendarCollectionView.h */,
+				2B75142B1CF6301B00DBFA80 /* SWActionSheet.h */,
+				2B75142C1CF6301B00DBFA80 /* SWActionSheet.m */,
 				2BFEBFE71CA25BE2004943CF /* FSCalendarCollectionView.m */,
 				2BFEBFE81CA25BE2004943CF /* FSCalendarConstance.h */,
 				2BFEBFE91CA25BE2004943CF /* FSCalendarConstance.m */,
@@ -222,13 +254,19 @@
 				2BFEBFF61CA25BE2004943CF /* NSString+FSExtension.m */,
 				2BFEBFF71CA25BE2004943CF /* UIView+FSExtension.h */,
 				2BFEBFF81CA25BE2004943CF /* UIView+FSExtension.m */,
+				2BB913281CEEDCF2002AF333 /* SCLAlertView */,
 				2BFEBFA51CA25872004943CF /* FSCalendar */,
+				2BFC31831CE5170D00581385 /* background.png */,
+				2BFC31891CE518E700581385 /* Profile.png */,
+				2BFC318B1CE5219300581385 /* add.png */,
 				2BFEBFA01CA24E8C004943CF /* CalendarTutorViewController.swift */,
+				2BFC318D1CE52DF000581385 /* addSessionViewController.swift */,
 				2BC866751CE2EBF500054843 /* mySessionsViewController.swift */,
 				2BC866771CE3DC7A00054843 /* TutorCalendarViewController.swift */,
 				2BFEBF5A1CA1C88D004943CF /* Global.swift */,
 				2B0EBFEC1C84E38500243EC6 /* AppDelegate.swift */,
 				2B0EBFEE1C84E38500243EC6 /* ViewController.swift */,
+				2BFC31811CE50E4A00581385 /* TJTextField.swift */,
 				2B07FB301C8E1BCE006077ED /* TutorViewController.swift */,
 				2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */,
 				2B0B7D191C92B27B00BB2BCC /* signUpController.swift */,
@@ -261,6 +299,29 @@
 			path = TutorMeUITests;
 			sourceTree = "<group>";
 		};
+		F2420FE7F78858B9CCEFACAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB384A3C0BC7CE18D6035131 /* Pods_TutorMe.framework */,
+				9D4E73224693F15E3D633380 /* Pods_TutorMeTests.framework */,
+				4C2F6CBE240E63E3973A3FCC /* Pods_TutorMeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF1F01FBC9BC4063E2EA1A7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7F4B8F901CFD31401352490 /* Pods-TutorMe.debug.xcconfig */,
+				508EF03078BE43EC59EAF54F /* Pods-TutorMe.release.xcconfig */,
+				F7E209FBA6C713831B1DDE98 /* Pods-TutorMeTests.debug.xcconfig */,
+				043ADB85F6939BA711176077 /* Pods-TutorMeTests.release.xcconfig */,
+				9E49615AE270E7512DEFAE38 /* Pods-TutorMeUITests.debug.xcconfig */,
+				7D76E004FAF6C46AFDA06E1A /* Pods-TutorMeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,9 +329,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B0EC0111C84E38500243EC6 /* Build configuration list for PBXNativeTarget "TutorMe" */;
 			buildPhases = (
+				9BAFE66B4B567E397294C91C /* 📦 Check Pods Manifest.lock */,
 				2B0EBFE51C84E38500243EC6 /* Sources */,
 				2B0EBFE61C84E38500243EC6 /* Frameworks */,
 				2B0EBFE71C84E38500243EC6 /* Resources */,
+				A4F2673867C4D33A65F2C855 /* 📦 Embed Pods Frameworks */,
+				99F1284AE7D11D75BADAC2E6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,9 +349,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B0EC0141C84E38500243EC6 /* Build configuration list for PBXNativeTarget "TutorMeTests" */;
 			buildPhases = (
+				499886400E260B067D0944E5 /* 📦 Check Pods Manifest.lock */,
 				2B0EBFF91C84E38500243EC6 /* Sources */,
 				2B0EBFFA1C84E38500243EC6 /* Frameworks */,
 				2B0EBFFB1C84E38500243EC6 /* Resources */,
+				5BFE62F80471ED14271DD65A /* 📦 Embed Pods Frameworks */,
+				99E49DE7982C243DE5295B1D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,9 +370,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B0EC0171C84E38500243EC6 /* Build configuration list for PBXNativeTarget "TutorMeUITests" */;
 			buildPhases = (
+				95CDD195CB230A388CC228DD /* 📦 Check Pods Manifest.lock */,
 				2B0EC0041C84E38500243EC6 /* Sources */,
 				2B0EC0051C84E38500243EC6 /* Frameworks */,
 				2B0EC0061C84E38500243EC6 /* Resources */,
+				8F82ABFF9611E28A4601195B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,13 +442,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BFEC0171CA3CBD4004943CF /* signin.png in Resources */,
+				2BFC31841CE5170D00581385 /* background.png in Resources */,
 				2BFEC0191CA3CBE7004943CF /* signup.png in Resources */,
+				2BFC318A1CE518E700581385 /* Profile.png in Resources */,
 				2B7C3E5C1C8EACFF00806E77 /* defaultUser.png in Resources */,
 				2BFEBFA61CA25872004943CF /* FSCalendar in Resources */,
 				2B0EBFF71C84E38500243EC6 /* LaunchScreen.storyboard in Resources */,
 				2B0EBFF41C84E38500243EC6 /* Assets.xcassets in Resources */,
 				2BFEC0151CA3CBC5004943CF /* signout.png in Resources */,
+				2BB913291CEEDCF2002AF333 /* SCLAlertView in Resources */,
 				2B0EBFF21C84E38500243EC6 /* Main.storyboard in Resources */,
+				2BFC318C1CE5219300581385 /* add.png in Resources */,
+				2B821F431CF15AB900D88025 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +473,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		499886400E260B067D0944E5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5BFE62F80471ED14271DD65A /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TutorMeTests/Pods-TutorMeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F82ABFF9611E28A4601195B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TutorMeUITests/Pods-TutorMeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95CDD195CB230A388CC228DD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		99E49DE7982C243DE5295B1D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TutorMeTests/Pods-TutorMeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99F1284AE7D11D75BADAC2E6 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TutorMe/Pods-TutorMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BAFE66B4B567E397294C91C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A4F2673867C4D33A65F2C855 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TutorMe/Pods-TutorMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B0EBFE51C84E38500243EC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -411,9 +608,11 @@
 				2BFEBFFB1CA25BE2004943CF /* FSCalendar+IBExtension.m in Sources */,
 				2BFEC0071CA25BE2004943CF /* UIView+FSExtension.m in Sources */,
 				2BFEBFF91CA25BE2004943CF /* CALayer+FSExtension.m in Sources */,
+				2BFC31821CE50E4A00581385 /* TJTextField.swift in Sources */,
 				2BFEC0041CA25BE2004943CF /* FSCalendarStickyHeader.m in Sources */,
 				2B0EBFEF1C84E38500243EC6 /* ViewController.swift in Sources */,
 				2BFEBFFD1CA25BE2004943CF /* FSCalendarAppearance.m in Sources */,
+				2BFC318E1CE52DF000581385 /* addSessionViewController.swift in Sources */,
 				2BFEBFFA1CA25BE2004943CF /* FSCalendar.m in Sources */,
 				2BFEBFFF1CA25BE2004943CF /* FSCalendarCollectionView.m in Sources */,
 				2BC866781CE3DC7A00054843 /* TutorCalendarViewController.swift in Sources */,
@@ -423,13 +622,13 @@
 				2BFEC0061CA25BE2004943CF /* NSString+FSExtension.m in Sources */,
 				2B0EBFED1C84E38500243EC6 /* AppDelegate.swift in Sources */,
 				2BFEBFFC1CA25BE2004943CF /* FSCalendarAnimator.m in Sources */,
+				2B75142D1CF6301B00DBFA80 /* SWActionSheet.m in Sources */,
 				2B9EAF851CE0930B00E7B0C9 /* ActionSheetStringPicker.m in Sources */,
 				2B9EAF731CE04B0700E7B0C9 /* SearchViewController.swift in Sources */,
 				2BFEC0031CA25BE2004943CF /* FSCalendarHeader.m in Sources */,
 				2BC866761CE2EBF500054843 /* mySessionsViewController.swift in Sources */,
 				2BFEC0011CA25BE2004943CF /* FSCalendarEventIndicator.m in Sources */,
 				2B9EAF821CE092F400E7B0C9 /* AbstractActionSheetPicker.m in Sources */,
-				2B9EAF881CE0935800E7B0C9 /* SWActionSheet.m in Sources */,
 				2BFEC0051CA25BE2004943CF /* NSDate+FSExtension.m in Sources */,
 				2B0B7D1A1C92B27B00BB2BCC /* signUpController.swift in Sources */,
 				2BFEBF5B1CA1C88D004943CF /* Global.swift in Sources */,
@@ -570,6 +769,7 @@
 		};
 		2B0EC0121C84E38500243EC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7F4B8F901CFD31401352490 /* Pods-TutorMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -584,6 +784,7 @@
 		};
 		2B0EC0131C84E38500243EC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508EF03078BE43EC59EAF54F /* Pods-TutorMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -597,6 +798,7 @@
 		};
 		2B0EC0151C84E38500243EC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7E209FBA6C713831B1DDE98 /* Pods-TutorMeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TutorMeTests/Info.plist;
@@ -609,6 +811,7 @@
 		};
 		2B0EC0161C84E38500243EC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 043ADB85F6939BA711176077 /* Pods-TutorMeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TutorMeTests/Info.plist;
@@ -621,6 +824,7 @@
 		};
 		2B0EC0181C84E38500243EC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E49615AE270E7512DEFAE38 /* Pods-TutorMeUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TutorMeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -633,6 +837,7 @@
 		};
 		2B0EC0191C84E38500243EC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D76E004FAF6C46AFDA06E1A /* Pods-TutorMeUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TutorMeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

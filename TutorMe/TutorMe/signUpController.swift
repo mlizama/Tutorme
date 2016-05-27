@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class signUpController: UIViewController, UITextFieldDelegate  {
 
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        //self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
 
         super.viewDidLoad()
 
@@ -59,9 +61,20 @@ class signUpController: UIViewController, UITextFieldDelegate  {
                                 if(!dataToReturn.isEmpty)
                                 {
                                     print(dataToReturn);
-                                    self.performSegueWithIdentifier("signUpBack", sender:sender);
+                                    SCLAlertView().showNotice(
+                                        "Congratulations!", // Title of view
+                                        subTitle: "You are now signed up. Plese sign in using your new account.", // String of view
+                                        duration: 0.0, // Duration to show before closing automatically, default: 0.0
+                                        closeButtonTitle: "Done", // Optional button value, default: ""
+                                        colorStyle: 0x406c8f,
+                                        colorTextButton: 0xFFFFFF
+                                    ).setDismissBlock({                                    self.performSegueWithIdentifier("signUpBack", sender:sender);
+                                    //SCLAlertView().showNotice("Congratulations!", subTitle: "You are now signed up. Plese sign in using your new account.").setDismissBlock({                                    self.performSegueWithIdentifier("signUpBack", sender:sender);
+})
+
                                     
                                 }
+                                
                             }
                         }    
                 }

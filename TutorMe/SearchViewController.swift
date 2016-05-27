@@ -10,8 +10,8 @@ import UIKit
 
 class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-    @IBOutlet var searchCourse: UIButton!
     @IBOutlet var nameButton: UITextField!
+    @IBOutlet var searchCourse: UIButton!
     var  dictionary: [String:Int] = [:]
     var data: [String] = [""]
     var courses: [String] = ["CSCI 100","CSCI 101","CSCI 102","CSCI 111","CSCI 111X","CSCI 144",
@@ -95,8 +95,10 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
     @IBAction func t(sender: AnyObject) {
         self.nameButton.endEditing(true)
         if(self.data.isEmpty == false){
+            
             let index = self.table.indexPathsForVisibleRows
             self.table.cellForRowAtIndexPath(index![0])?.textLabel?.textColor = UIColor.blackColor()
+
         }
         ActionSheetStringPicker.showPickerWithTitle("choose course", rows: courses, initialSelection: 0, doneBlock:{
             picker, selectedIndex, selectedValue in
@@ -169,6 +171,7 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
             return
             }
             , cancelBlock: nil, origin: self.view)
+
     }
 
 
@@ -182,8 +185,9 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
         self.searchCourse.backgroundColor = UIColor.whiteColor()
         self.searchCourse.layer.cornerRadius = 10
         self.table.layer.cornerRadius = 10
-        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
-        
+        //self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+
         self.table.delegate = self
         self.table.dataSource = self
         self.table.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")

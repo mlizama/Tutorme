@@ -27,7 +27,6 @@ class mySessionsViewController: UIViewController, FSCalendarDelegate, FSCalendar
         self.data.removeAll()
 
         self.tabBarController!.delegate = self
-        self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
         self.table.layer.cornerRadius = 10
         self.table.delegate = self
         self.table.dataSource = self
@@ -35,7 +34,8 @@ class mySessionsViewController: UIViewController, FSCalendarDelegate, FSCalendar
 
         self.calendar.delegate = self
         self.calendar.dataSource = self
-        self.calendar.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
+        self.calendar.backgroundColor = UIColor.clearColor()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
         
        
 
@@ -44,6 +44,7 @@ class mySessionsViewController: UIViewController, FSCalendarDelegate, FSCalendar
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.dates.removeAll()
         let url: NSURL = NSURL(string: "http://default-environment.s4mivgjgvz.us-east-1.elasticbeanstalk.com/mysessions.php")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
         var body = "";
