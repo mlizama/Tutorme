@@ -19,7 +19,7 @@
 		2B0EBFF71C84E38500243EC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0EBFF51C84E38500243EC6 /* LaunchScreen.storyboard */; };
 		2B0EC0021C84E38500243EC6 /* TutorMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0011C84E38500243EC6 /* TutorMeTests.swift */; };
 		2B0EC00D1C84E38500243EC6 /* TutorMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC00C1C84E38500243EC6 /* TutorMeUITests.swift */; };
-		2B75142D1CF6301B00DBFA80 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B75142C1CF6301B00DBFA80 /* SWActionSheet.m */; };
+		2B2CBB371CFEA046002EB522 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2CBB361CFEA046002EB522 /* SWActionSheet.m */; };
 		2B7C3E5C1C8EACFF00806E77 /* defaultUser.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C3E5B1C8EACFF00806E77 /* defaultUser.png */; };
 		2B821F431CF15AB900D88025 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B821F421CF15AB900D88025 /* logo.png */; };
 		2B9EAF731CE04B0700E7B0C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */; };
@@ -94,8 +94,8 @@
 		2B0EC0081C84E38500243EC6 /* TutorMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0EC00C1C84E38500243EC6 /* TutorMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorMeUITests.swift; sourceTree = "<group>"; };
 		2B0EC00E1C84E38500243EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B75142B1CF6301B00DBFA80 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = "../../../../Downloads/ActionSheetPicker-3.0-master/Pickers/SWActionSheet.h"; sourceTree = "<group>"; };
-		2B75142C1CF6301B00DBFA80 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = "../../../../Downloads/ActionSheetPicker-3.0-master/Pickers/SWActionSheet.m"; sourceTree = "<group>"; };
+		2B2CBB351CFEA046002EB522 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
+		2B2CBB361CFEA046002EB522 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
 		2B7C3E5B1C8EACFF00806E77 /* defaultUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultUser.png; sourceTree = "<group>"; };
 		2B821F421CF15AB900D88025 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
@@ -230,12 +230,12 @@
 				2BFEBFE01CA25BE2004943CF /* FSCalendarAnimator.h */,
 				2BFEBFE11CA25BE2004943CF /* FSCalendarAnimator.m */,
 				2BFEBFE21CA25BE2004943CF /* FSCalendarAppearance.h */,
+				2B2CBB351CFEA046002EB522 /* SWActionSheet.h */,
+				2B2CBB361CFEA046002EB522 /* SWActionSheet.m */,
 				2BFEBFE31CA25BE2004943CF /* FSCalendarAppearance.m */,
 				2BFEBFE41CA25BE2004943CF /* FSCalendarCell.h */,
 				2BFEBFE51CA25BE2004943CF /* FSCalendarCell.m */,
 				2BFEBFE61CA25BE2004943CF /* FSCalendarCollectionView.h */,
-				2B75142B1CF6301B00DBFA80 /* SWActionSheet.h */,
-				2B75142C1CF6301B00DBFA80 /* SWActionSheet.m */,
 				2BFEBFE71CA25BE2004943CF /* FSCalendarCollectionView.m */,
 				2BFEBFE81CA25BE2004943CF /* FSCalendarConstance.h */,
 				2BFEBFE91CA25BE2004943CF /* FSCalendarConstance.m */,
@@ -622,7 +622,7 @@
 				2BFEC0061CA25BE2004943CF /* NSString+FSExtension.m in Sources */,
 				2B0EBFED1C84E38500243EC6 /* AppDelegate.swift in Sources */,
 				2BFEBFFC1CA25BE2004943CF /* FSCalendarAnimator.m in Sources */,
-				2B75142D1CF6301B00DBFA80 /* SWActionSheet.m in Sources */,
+				2B2CBB371CFEA046002EB522 /* SWActionSheet.m in Sources */,
 				2B9EAF851CE0930B00E7B0C9 /* ActionSheetStringPicker.m in Sources */,
 				2B9EAF731CE04B0700E7B0C9 /* SearchViewController.swift in Sources */,
 				2BFEC0031CA25BE2004943CF /* FSCalendarHeader.m in Sources */,
