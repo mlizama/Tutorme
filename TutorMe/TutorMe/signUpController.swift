@@ -9,6 +9,7 @@
 import UIKit
 import SCLAlertView
 
+
 class signUpController: UIViewController, UITextFieldDelegate  {
 
     @IBOutlet weak var userName: UITextField!

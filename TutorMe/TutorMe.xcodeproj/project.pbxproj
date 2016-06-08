@@ -19,13 +19,9 @@
 		2B0EBFF71C84E38500243EC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0EBFF51C84E38500243EC6 /* LaunchScreen.storyboard */; };
 		2B0EC0021C84E38500243EC6 /* TutorMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0011C84E38500243EC6 /* TutorMeTests.swift */; };
 		2B0EC00D1C84E38500243EC6 /* TutorMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC00C1C84E38500243EC6 /* TutorMeUITests.swift */; };
-		2B2CBB371CFEA046002EB522 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2CBB361CFEA046002EB522 /* SWActionSheet.m */; };
 		2B7C3E5C1C8EACFF00806E77 /* defaultUser.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C3E5B1C8EACFF00806E77 /* defaultUser.png */; };
 		2B821F431CF15AB900D88025 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B821F421CF15AB900D88025 /* logo.png */; };
 		2B9EAF731CE04B0700E7B0C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */; };
-		2B9EAF821CE092F400E7B0C9 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EAF811CE092F400E7B0C9 /* AbstractActionSheetPicker.m */; };
-		2B9EAF851CE0930B00E7B0C9 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EAF841CE0930B00E7B0C9 /* ActionSheetStringPicker.m */; };
-		2BB913291CEEDCF2002AF333 /* SCLAlertView in Resources */ = {isa = PBXBuildFile; fileRef = 2BB913281CEEDCF2002AF333 /* SCLAlertView */; };
 		2BC866761CE2EBF500054843 /* mySessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC866751CE2EBF500054843 /* mySessionsViewController.swift */; };
 		2BC866781CE3DC7A00054843 /* TutorCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC866771CE3DC7A00054843 /* TutorCalendarViewController.swift */; };
 		2BFC31821CE50E4A00581385 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFC31811CE50E4A00581385 /* TJTextField.swift */; };
@@ -36,21 +32,6 @@
 		2BFEBF5B1CA1C88D004943CF /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBF5A1CA1C88D004943CF /* Global.swift */; };
 		2BFEBFA11CA24E8C004943CF /* CalendarTutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFA01CA24E8C004943CF /* CalendarTutorViewController.swift */; };
 		2BFEBFA61CA25872004943CF /* FSCalendar in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEBFA51CA25872004943CF /* FSCalendar */; };
-		2BFEBFF91CA25BE2004943CF /* CALayer+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFDB1CA25BE2004943CF /* CALayer+FSExtension.m */; };
-		2BFEBFFA1CA25BE2004943CF /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFDD1CA25BE2004943CF /* FSCalendar.m */; };
-		2BFEBFFB1CA25BE2004943CF /* FSCalendar+IBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFDF1CA25BE2004943CF /* FSCalendar+IBExtension.m */; };
-		2BFEBFFC1CA25BE2004943CF /* FSCalendarAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFE11CA25BE2004943CF /* FSCalendarAnimator.m */; };
-		2BFEBFFD1CA25BE2004943CF /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFE31CA25BE2004943CF /* FSCalendarAppearance.m */; };
-		2BFEBFFE1CA25BE2004943CF /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFE51CA25BE2004943CF /* FSCalendarCell.m */; };
-		2BFEBFFF1CA25BE2004943CF /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFE71CA25BE2004943CF /* FSCalendarCollectionView.m */; };
-		2BFEC0001CA25BE2004943CF /* FSCalendarConstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFE91CA25BE2004943CF /* FSCalendarConstance.m */; };
-		2BFEC0011CA25BE2004943CF /* FSCalendarEventIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFEC1CA25BE2004943CF /* FSCalendarEventIndicator.m */; };
-		2BFEC0021CA25BE2004943CF /* FSCalendarFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFEE1CA25BE2004943CF /* FSCalendarFlowLayout.m */; };
-		2BFEC0031CA25BE2004943CF /* FSCalendarHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFF01CA25BE2004943CF /* FSCalendarHeader.m */; };
-		2BFEC0041CA25BE2004943CF /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFF21CA25BE2004943CF /* FSCalendarStickyHeader.m */; };
-		2BFEC0051CA25BE2004943CF /* NSDate+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFF41CA25BE2004943CF /* NSDate+FSExtension.m */; };
-		2BFEC0061CA25BE2004943CF /* NSString+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFF61CA25BE2004943CF /* NSString+FSExtension.m */; };
-		2BFEC0071CA25BE2004943CF /* UIView+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEBFF81CA25BE2004943CF /* UIView+FSExtension.m */; };
 		2BFEC0151CA3CBC5004943CF /* signout.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEC0141CA3CBC5004943CF /* signout.png */; };
 		2BFEC0171CA3CBD4004943CF /* signin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEC0161CA3CBD4004943CF /* signin.png */; };
 		2BFEC0191CA3CBE7004943CF /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFEC0181CA3CBE7004943CF /* signup.png */; };
@@ -94,16 +75,9 @@
 		2B0EC0081C84E38500243EC6 /* TutorMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B0EC00C1C84E38500243EC6 /* TutorMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorMeUITests.swift; sourceTree = "<group>"; };
 		2B0EC00E1C84E38500243EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B2CBB351CFEA046002EB522 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
-		2B2CBB361CFEA046002EB522 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
 		2B7C3E5B1C8EACFF00806E77 /* defaultUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultUser.png; sourceTree = "<group>"; };
 		2B821F421CF15AB900D88025 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
-		2B9EAF801CE092E700E7B0C9 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
-		2B9EAF811CE092F400E7B0C9 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
-		2B9EAF831CE0930B00E7B0C9 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
-		2B9EAF841CE0930B00E7B0C9 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
-		2BB913281CEEDCF2002AF333 /* SCLAlertView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SCLAlertView; sourceTree = "<group>"; };
 		2BC866751CE2EBF500054843 /* mySessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mySessionsViewController.swift; path = ../mySessionsViewController.swift; sourceTree = "<group>"; };
 		2BC866771CE3DC7A00054843 /* TutorCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorCalendarViewController.swift; sourceTree = "<group>"; };
 		2BFC31811CE50E4A00581385 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJTextField.swift; sourceTree = "<group>"; };
@@ -115,37 +89,6 @@
 		2BFEBF5D1CA24763004943CF /* TutorMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TutorMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		2BFEBFA01CA24E8C004943CF /* CalendarTutorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTutorViewController.swift; sourceTree = "<group>"; };
 		2BFEBFA51CA25872004943CF /* FSCalendar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FSCalendar; sourceTree = "<group>"; };
-		2BFEBFDA1CA25BE2004943CF /* CALayer+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+FSExtension.h"; path = "FSCalendar/CALayer+FSExtension.h"; sourceTree = "<group>"; };
-		2BFEBFDB1CA25BE2004943CF /* CALayer+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+FSExtension.m"; path = "FSCalendar/CALayer+FSExtension.m"; sourceTree = "<group>"; };
-		2BFEBFDC1CA25BE2004943CF /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendar.h; path = FSCalendar/FSCalendar.h; sourceTree = "<group>"; };
-		2BFEBFDD1CA25BE2004943CF /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendar.m; path = FSCalendar/FSCalendar.m; sourceTree = "<group>"; };
-		2BFEBFDE1CA25BE2004943CF /* FSCalendar+IBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FSCalendar+IBExtension.h"; path = "FSCalendar/FSCalendar+IBExtension.h"; sourceTree = "<group>"; };
-		2BFEBFDF1CA25BE2004943CF /* FSCalendar+IBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FSCalendar+IBExtension.m"; path = "FSCalendar/FSCalendar+IBExtension.m"; sourceTree = "<group>"; };
-		2BFEBFE01CA25BE2004943CF /* FSCalendarAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarAnimator.h; path = FSCalendar/FSCalendarAnimator.h; sourceTree = "<group>"; };
-		2BFEBFE11CA25BE2004943CF /* FSCalendarAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarAnimator.m; path = FSCalendar/FSCalendarAnimator.m; sourceTree = "<group>"; };
-		2BFEBFE21CA25BE2004943CF /* FSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarAppearance.h; path = FSCalendar/FSCalendarAppearance.h; sourceTree = "<group>"; };
-		2BFEBFE31CA25BE2004943CF /* FSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarAppearance.m; path = FSCalendar/FSCalendarAppearance.m; sourceTree = "<group>"; };
-		2BFEBFE41CA25BE2004943CF /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCell.h; path = FSCalendar/FSCalendarCell.h; sourceTree = "<group>"; };
-		2BFEBFE51CA25BE2004943CF /* FSCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCell.m; path = FSCalendar/FSCalendarCell.m; sourceTree = "<group>"; };
-		2BFEBFE61CA25BE2004943CF /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionView.h; path = FSCalendar/FSCalendarCollectionView.h; sourceTree = "<group>"; };
-		2BFEBFE71CA25BE2004943CF /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionView.m; path = FSCalendar/FSCalendarCollectionView.m; sourceTree = "<group>"; };
-		2BFEBFE81CA25BE2004943CF /* FSCalendarConstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarConstance.h; path = FSCalendar/FSCalendarConstance.h; sourceTree = "<group>"; };
-		2BFEBFE91CA25BE2004943CF /* FSCalendarConstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarConstance.m; path = FSCalendar/FSCalendarConstance.m; sourceTree = "<group>"; };
-		2BFEBFEA1CA25BE2004943CF /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarDynamicHeader.h; path = FSCalendar/FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
-		2BFEBFEB1CA25BE2004943CF /* FSCalendarEventIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarEventIndicator.h; path = FSCalendar/FSCalendarEventIndicator.h; sourceTree = "<group>"; };
-		2BFEBFEC1CA25BE2004943CF /* FSCalendarEventIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarEventIndicator.m; path = FSCalendar/FSCalendarEventIndicator.m; sourceTree = "<group>"; };
-		2BFEBFED1CA25BE2004943CF /* FSCalendarFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarFlowLayout.h; path = FSCalendar/FSCalendarFlowLayout.h; sourceTree = "<group>"; };
-		2BFEBFEE1CA25BE2004943CF /* FSCalendarFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarFlowLayout.m; path = FSCalendar/FSCalendarFlowLayout.m; sourceTree = "<group>"; };
-		2BFEBFEF1CA25BE2004943CF /* FSCalendarHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarHeader.h; path = FSCalendar/FSCalendarHeader.h; sourceTree = "<group>"; };
-		2BFEBFF01CA25BE2004943CF /* FSCalendarHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarHeader.m; path = FSCalendar/FSCalendarHeader.m; sourceTree = "<group>"; };
-		2BFEBFF11CA25BE2004943CF /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarStickyHeader.h; path = FSCalendar/FSCalendarStickyHeader.h; sourceTree = "<group>"; };
-		2BFEBFF21CA25BE2004943CF /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarStickyHeader.m; path = FSCalendar/FSCalendarStickyHeader.m; sourceTree = "<group>"; };
-		2BFEBFF31CA25BE2004943CF /* NSDate+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+FSExtension.h"; path = "FSCalendar/NSDate+FSExtension.h"; sourceTree = "<group>"; };
-		2BFEBFF41CA25BE2004943CF /* NSDate+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+FSExtension.m"; path = "FSCalendar/NSDate+FSExtension.m"; sourceTree = "<group>"; };
-		2BFEBFF51CA25BE2004943CF /* NSString+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FSExtension.h"; path = "FSCalendar/NSString+FSExtension.h"; sourceTree = "<group>"; };
-		2BFEBFF61CA25BE2004943CF /* NSString+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FSExtension.m"; path = "FSCalendar/NSString+FSExtension.m"; sourceTree = "<group>"; };
-		2BFEBFF71CA25BE2004943CF /* UIView+FSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FSExtension.h"; path = "FSCalendar/UIView+FSExtension.h"; sourceTree = "<group>"; };
-		2BFEBFF81CA25BE2004943CF /* UIView+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FSExtension.m"; path = "FSCalendar/UIView+FSExtension.m"; sourceTree = "<group>"; };
 		2BFEC0141CA3CBC5004943CF /* signout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signout.png; sourceTree = "<group>"; };
 		2BFEC0161CA3CBD4004943CF /* signin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin.png; sourceTree = "<group>"; };
 		2BFEC0181CA3CBE7004943CF /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
@@ -217,44 +160,6 @@
 		2B0EBFEB1C84E38500243EC6 /* TutorMe */ = {
 			isa = PBXGroup;
 			children = (
-				2B9EAF801CE092E700E7B0C9 /* AbstractActionSheetPicker.h */,
-				2B9EAF811CE092F400E7B0C9 /* AbstractActionSheetPicker.m */,
-				2B9EAF831CE0930B00E7B0C9 /* ActionSheetStringPicker.h */,
-				2B9EAF841CE0930B00E7B0C9 /* ActionSheetStringPicker.m */,
-				2BFEBFDA1CA25BE2004943CF /* CALayer+FSExtension.h */,
-				2BFEBFDB1CA25BE2004943CF /* CALayer+FSExtension.m */,
-				2BFEBFDC1CA25BE2004943CF /* FSCalendar.h */,
-				2BFEBFDD1CA25BE2004943CF /* FSCalendar.m */,
-				2BFEBFDE1CA25BE2004943CF /* FSCalendar+IBExtension.h */,
-				2BFEBFDF1CA25BE2004943CF /* FSCalendar+IBExtension.m */,
-				2BFEBFE01CA25BE2004943CF /* FSCalendarAnimator.h */,
-				2BFEBFE11CA25BE2004943CF /* FSCalendarAnimator.m */,
-				2BFEBFE21CA25BE2004943CF /* FSCalendarAppearance.h */,
-				2B2CBB351CFEA046002EB522 /* SWActionSheet.h */,
-				2B2CBB361CFEA046002EB522 /* SWActionSheet.m */,
-				2BFEBFE31CA25BE2004943CF /* FSCalendarAppearance.m */,
-				2BFEBFE41CA25BE2004943CF /* FSCalendarCell.h */,
-				2BFEBFE51CA25BE2004943CF /* FSCalendarCell.m */,
-				2BFEBFE61CA25BE2004943CF /* FSCalendarCollectionView.h */,
-				2BFEBFE71CA25BE2004943CF /* FSCalendarCollectionView.m */,
-				2BFEBFE81CA25BE2004943CF /* FSCalendarConstance.h */,
-				2BFEBFE91CA25BE2004943CF /* FSCalendarConstance.m */,
-				2BFEBFEA1CA25BE2004943CF /* FSCalendarDynamicHeader.h */,
-				2BFEBFEB1CA25BE2004943CF /* FSCalendarEventIndicator.h */,
-				2BFEBFEC1CA25BE2004943CF /* FSCalendarEventIndicator.m */,
-				2BFEBFED1CA25BE2004943CF /* FSCalendarFlowLayout.h */,
-				2BFEBFEE1CA25BE2004943CF /* FSCalendarFlowLayout.m */,
-				2BFEBFEF1CA25BE2004943CF /* FSCalendarHeader.h */,
-				2BFEBFF01CA25BE2004943CF /* FSCalendarHeader.m */,
-				2BFEBFF11CA25BE2004943CF /* FSCalendarStickyHeader.h */,
-				2BFEBFF21CA25BE2004943CF /* FSCalendarStickyHeader.m */,
-				2BFEBFF31CA25BE2004943CF /* NSDate+FSExtension.h */,
-				2BFEBFF41CA25BE2004943CF /* NSDate+FSExtension.m */,
-				2BFEBFF51CA25BE2004943CF /* NSString+FSExtension.h */,
-				2BFEBFF61CA25BE2004943CF /* NSString+FSExtension.m */,
-				2BFEBFF71CA25BE2004943CF /* UIView+FSExtension.h */,
-				2BFEBFF81CA25BE2004943CF /* UIView+FSExtension.m */,
-				2BB913281CEEDCF2002AF333 /* SCLAlertView */,
 				2BFEBFA51CA25872004943CF /* FSCalendar */,
 				2BFC31831CE5170D00581385 /* background.png */,
 				2BFC31891CE518E700581385 /* Profile.png */,
@@ -450,7 +355,6 @@
 				2B0EBFF71C84E38500243EC6 /* LaunchScreen.storyboard in Resources */,
 				2B0EBFF41C84E38500243EC6 /* Assets.xcassets in Resources */,
 				2BFEC0151CA3CBC5004943CF /* signout.png in Resources */,
-				2BB913291CEEDCF2002AF333 /* SCLAlertView in Resources */,
 				2B0EBFF21C84E38500243EC6 /* Main.storyboard in Resources */,
 				2BFC318C1CE5219300581385 /* add.png in Resources */,
 				2B821F431CF15AB900D88025 /* logo.png in Resources */,
@@ -601,35 +505,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BFEC0021CA25BE2004943CF /* FSCalendarFlowLayout.m in Sources */,
 				2B07FB331C8EA42F006077ED /* TuteeViewController.swift in Sources */,
-				2BFEC0001CA25BE2004943CF /* FSCalendarConstance.m in Sources */,
 				2B07FB311C8E1BCE006077ED /* TutorViewController.swift in Sources */,
-				2BFEBFFB1CA25BE2004943CF /* FSCalendar+IBExtension.m in Sources */,
-				2BFEC0071CA25BE2004943CF /* UIView+FSExtension.m in Sources */,
-				2BFEBFF91CA25BE2004943CF /* CALayer+FSExtension.m in Sources */,
 				2BFC31821CE50E4A00581385 /* TJTextField.swift in Sources */,
-				2BFEC0041CA25BE2004943CF /* FSCalendarStickyHeader.m in Sources */,
 				2B0EBFEF1C84E38500243EC6 /* ViewController.swift in Sources */,
-				2BFEBFFD1CA25BE2004943CF /* FSCalendarAppearance.m in Sources */,
 				2BFC318E1CE52DF000581385 /* addSessionViewController.swift in Sources */,
-				2BFEBFFA1CA25BE2004943CF /* FSCalendar.m in Sources */,
-				2BFEBFFF1CA25BE2004943CF /* FSCalendarCollectionView.m in Sources */,
 				2BC866781CE3DC7A00054843 /* TutorCalendarViewController.swift in Sources */,
 				2B076B3C1C858B7F001BCB17 /* SwiftyJSON.swift in Sources */,
-				2BFEBFFE1CA25BE2004943CF /* FSCalendarCell.m in Sources */,
 				2BFEBFA11CA24E8C004943CF /* CalendarTutorViewController.swift in Sources */,
-				2BFEC0061CA25BE2004943CF /* NSString+FSExtension.m in Sources */,
 				2B0EBFED1C84E38500243EC6 /* AppDelegate.swift in Sources */,
-				2BFEBFFC1CA25BE2004943CF /* FSCalendarAnimator.m in Sources */,
-				2B2CBB371CFEA046002EB522 /* SWActionSheet.m in Sources */,
-				2B9EAF851CE0930B00E7B0C9 /* ActionSheetStringPicker.m in Sources */,
 				2B9EAF731CE04B0700E7B0C9 /* SearchViewController.swift in Sources */,
-				2BFEC0031CA25BE2004943CF /* FSCalendarHeader.m in Sources */,
 				2BC866761CE2EBF500054843 /* mySessionsViewController.swift in Sources */,
-				2BFEC0011CA25BE2004943CF /* FSCalendarEventIndicator.m in Sources */,
-				2B9EAF821CE092F400E7B0C9 /* AbstractActionSheetPicker.m in Sources */,
-				2BFEC0051CA25BE2004943CF /* NSDate+FSExtension.m in Sources */,
 				2B0B7D1A1C92B27B00BB2BCC /* signUpController.swift in Sources */,
 				2BFEBF5B1CA1C88D004943CF /* Global.swift in Sources */,
 			);

@@ -21,6 +21,6 @@
 #import "NSString+FSExtension.h"
 #import "UIView+FSExtension.h"
 
-#import "ActionSheetStringPicker.h"
-#import "AbstractActionSheetPicker.h"
-#import "SWActionSheet.h"
+//#import "SCLAlertView/ActionSheetStringPicker.h"
+//#import "SCLAlertView/AbstractActionSheetPicker.h"
+//#import "SCLAlertView/SWActionSheet.h"

@@ -1,12 +1,18 @@
 PODS:
-  - SCLAlertView (0.5.6)
+  - ActionSheetPicker-3.0 (2.1.0)
+  - FSCalendar (2.1.1)
+  - SCLAlertView (0.5.8)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - FSCalendar
   - SCLAlertView
 
 SPEC CHECKSUMS:
-  SCLAlertView: c2b916952520d96cf5e886a38053f1b8c3da502e
+  ActionSheetPicker-3.0: db66605feb85689279d328206c61f0e4f398df92
+  FSCalendar: 04dc531f06fbde8a8e5b7394e9d4edebd45a591f
+  SCLAlertView: 653e84d1f9fd95333bc54671fbadb7d0c47fce49
 
-PODFILE CHECKSUM: fb214c75896d9877e53c7e21117285fda53140b9
+PODFILE CHECKSUM: 4251363f4723480f8d3f6cd81b5dcba3b4f14f11
 
 COCOAPODS: 1.0.0

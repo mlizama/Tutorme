@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ActionSheetPicker-3.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FSCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TutorMe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>14A81F05266D7063AF4D8D9C2B53D2CF</key>
+		<key>053617A05C5A952CF2888B88D119FE01</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1296D4F5B7C56E1AB244018D5DE2B171</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,7 +52,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD086947D3338940962B90A55FBA83E0</key>
+		<key>8C9B5ADED0A2A087916AABA9F215122B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B2619B2813D910DBC9FE9714E0788D55</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -6,7 +6,10 @@ target 'TutorMe' do
   use_frameworks!
 
   # Pods for TutorMe
+
   pod 'SCLAlertView'
+  pod 'FSCalendar'
+  pod 'ActionSheetPicker-3.0'
 
   target 'TutorMeTests' do
     inherit! :search_paths

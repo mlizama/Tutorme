@@ -3,7 +3,9 @@
 //  Pods
 //
 //  Created by DingWenchao on 6/29/15.
+//  Copyright © 2016 Wenchao Ding. All rights reserved.
 //
+//  https://github.com/WenchaoD
 //
 
 #import "FSCalendarAppearance.h"
@@ -53,7 +55,7 @@
 - (void)invalidateHeaderTextColor;
 
 - (void)invalidateBorderColors;
-- (void)invalidateBackgroundColors;
+- (void)invalidateFillColors;
 - (void)invalidateEventColors;
 - (void)invalidateCellShapes;
 
@@ -374,7 +376,7 @@
     } else {
         [_backgroundColors removeObjectForKey:@(FSCalendarCellStateSelected)];
     }
-    [self invalidateBackgroundColors];
+    [self invalidateFillColors];
 }
 
 - (UIColor *)selectionColor
@@ -389,7 +391,7 @@
     } else {
         [_backgroundColors removeObjectForKey:@(FSCalendarCellStateToday)];
     }
-    [self invalidateBackgroundColors];
+    [self invalidateFillColors];
 }
 
 - (UIColor *)todayColor
@@ -404,7 +406,7 @@
     } else {
         [_backgroundColors removeObjectForKey:@(FSCalendarCellStateToday|FSCalendarCellStateSelected)];
     }
-    [self invalidateBackgroundColors];
+    [self invalidateFillColors];
 }
 
 - (UIColor *)todaySelectionColor
@@ -562,7 +564,7 @@
     [self invalidateFonts];
     [self invalidateTextColors];
     [self invalidateBorderColors];
-    [self invalidateBackgroundColors];
+    [self invalidateFillColors];
     /*
     [_calendar.collectionView.visibleCells enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [_calendar invalidateAppearanceForCell:obj];
@@ -593,7 +595,7 @@
     [_calendar.collectionView.visibleCells makeObjectsPerformSelector:_cmd];
 }
 
-- (void)invalidateBackgroundColors
+- (void)invalidateFillColors
 {
     [_calendar.collectionView.visibleCells makeObjectsPerformSelector:_cmd];
 }

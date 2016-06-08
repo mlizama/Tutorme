@@ -31,14 +31,14 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 - (NSDate *)minimumDateForCalendar;
 - (NSDate *)maximumDateForCalendar;
 
-- (UIColor *)preferredSelectionColorForDate:(NSDate *)date;
+- (UIColor *)preferredFillSelectionColorForDate:(NSDate *)date;
 - (UIColor *)preferredTitleDefaultColorForDate:(NSDate *)date;
 - (UIColor *)preferredTitleSelectionColorForDate:(NSDate *)date;
 - (UIColor *)preferredSubtitleDefaultColorForDate:(NSDate *)date;
 - (UIColor *)preferredSubtitleSelectionColorForDate:(NSDate *)date;
-- (UIColor *)preferredEventColorForDate:(NSDate *)date;
 - (UIColor *)preferredBorderDefaultColorForDate:(NSDate *)date;
 - (UIColor *)preferredBorderSelectionColorForDate:(NSDate *)date;
+- (id)preferredEventColorForDate:(NSDate *)date;
 - (FSCalendarCellShape)preferredCellShapeForDate:(NSDate *)date;
 
 - (BOOL)shouldSelectDate:(NSDate *)date;
@@ -94,7 +94,6 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 @property (readonly, nonatomic) id<FSCalendarDelegateAppearance> delegateAppearance;
 
 - (void)orientationDidChange:(NSNotification *)notification;
-- (void)significantTimeDidChange:(NSNotification *)notification;
 
 - (NSDate *)dateForIndexPath:(NSIndexPath *)indexPath;
 - (NSDate *)dateForIndexPath:(NSIndexPath *)indexPath scope:(FSCalendarScope)scope;
@@ -172,8 +171,14 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     _firstWeekday = 1;
     [self invalidateDateTools];
     
+#if TARGET_INTERFACE_BUILDER
+    _minimumDate = [self beginingOfMonthOfDate:[NSDate date]];
+    _maximumDate = [self dateByAddingMonths:4 toDate:_minimumDate];
+#else
     _minimumDate = [self dateWithYear:1970 month:1 day:1];
     _maximumDate = [self dateWithYear:2099 month:12 day:31];
+#endif
+    
     
     _headerHeight     = FSCalendarAutomaticDimension;
     _weekdayHeight    = FSCalendarAutomaticDimension;
@@ -253,7 +258,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     self.animator.collectionViewLayout = self.collectionViewLayout;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(significantTimeDidChange:) name:UIApplicationSignificantTimeChangeNotification object:nil];
+    
 }
 
 - (void)dealloc
@@ -262,7 +267,6 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     _collectionView.dataSource = nil;
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationSignificantTimeChangeNotification object:nil];
 }
 
 #pragma mark - Overriden methods
@@ -699,11 +703,6 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     self.orientation = self.currentCalendarOrientation;
 }
 
-- (void)significantTimeDidChange:(NSNotification *)notification
-{
-    self.today = [NSDate date];
-}
-
 #pragma mark - Properties
 
 - (void)setAppearance:(FSCalendarAppearance *)appearance
@@ -809,6 +808,25 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         currentPage = [self dateByIgnoringTimeComponentsOfDate:currentPage];
         [self scrollToPageForDate:currentPage animated:animated];
     }
+}
+
+- (CGRect)frameForDate:(NSDate *)date
+{
+    if (!self.superview) {
+        return CGRectZero;
+    }
+    CGRect frame = [_collectionViewLayout layoutAttributesForItemAtIndexPath:[self indexPathForDate:date]].frame;
+    frame = [self.superview convertRect:frame fromView:_collectionView];
+    return frame;
+}
+
+- (CGPoint)centerForDate:(NSDate *)date
+{
+    CGRect frame = [self frameForDate:date];
+    if (CGRectIsEmpty(frame)) {
+        return CGPointZero;
+    }
+    return CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
 }
 
 - (void)setHeaderHeight:(CGFloat)headerHeight
@@ -1391,7 +1409,11 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 
 - (BOOL)hasValidateVisibleLayout
 {
-    return self.superview  && !CGSizeEqualToSize(_collectionView.frame.size, CGSizeZero) && !CGSizeEqualToSize(_collectionView.contentSize, CGSizeZero);
+#if TARGET_INTERFACE_BUILDER
+    return YES;
+#else
+    return self.superview  && !CGRectIsEmpty(_collectionView.frame) && !CGSizeEqualToSize(_collectionView.contentSize, CGSizeZero);
+#endif
 }
 
 - (void)invalidateDateTools
@@ -1498,7 +1520,8 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 
 - (void)invalidateAppearanceForCell:(FSCalendarCell *)cell
 {
-    cell.preferredSelectionColor = [self preferredSelectionColorForDate:cell.date];
+    cell.preferredFillSelectionColor = [self preferredFillSelectionColorForDate:cell.date];
+    cell.preferredFillDefaultColor = [self preferredFillDefaultColorForDate:cell.date];
     cell.preferredTitleDefaultColor = [self preferredTitleDefaultColorForDate:cell.date];
     cell.preferredTitleSelectionColor = [self preferredTitleSelectionColorForDate:cell.date];
     if (cell.subtitle) {
@@ -1699,12 +1722,35 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 #pragma GCC diagnostic pop
 }
 
-- (UIColor *)preferredSelectionColorForDate:(NSDate *)date
+- (UIColor *)preferredFillDefaultColorForDate:(NSDate *)date
 {
-    if (self.delegateAppearance && [self.delegateAppearance respondsToSelector:@selector(calendar:appearance:selectionColorForDate:)]) {
+    if (self.delegateAppearance && [self.delegateAppearance respondsToSelector:@selector(calendar:appearance:fillDefaultColorForDate:)]) {
+        UIColor *color = [self.delegateAppearance calendar:self appearance:self.appearance fillDefaultColorForDate:date];
+        return color;
+    }
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+    else if (self.delegateAppearance && [self.delegateAppearance respondsToSelector:@selector(calendar:appearance:fillColorForDate:)]) {
+        UIColor *color = [self.delegateAppearance calendar:self appearance:self.appearance fillColorForDate:date];
+        return color;
+    }
+#pragma GCC diagnostic pop
+    return nil;
+}
+
+- (UIColor *)preferredFillSelectionColorForDate:(NSDate *)date
+{
+    if (self.delegateAppearance && [self.delegateAppearance respondsToSelector:@selector(calendar:appearance:fillSelectionColorForDate:)]) {
+        UIColor *color = [self.delegateAppearance calendar:self appearance:self.appearance fillSelectionColorForDate:date];
+        return color;
+    }
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+    else if (self.delegateAppearance && [self.delegateAppearance respondsToSelector:@selector(calendar:appearance:selectionColorForDate:)]) {
         UIColor *color = [self.delegateAppearance calendar:self appearance:self.appearance selectionColorForDate:date];
         return color;
     }
+#pragma GCC diagnostic pop
     return nil;
 }
 
@@ -1744,11 +1790,19 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     return nil;
 }
 
-- (UIColor *)preferredEventColorForDate:(NSDate *)date
+- (id)preferredEventColorForDate:(NSDate *)date
 {
+    if (self.delegateAppearance && [self.delegateAppearance respondsToSelector:@selector(calendar:appearance:eventColorsForDate:)]) {
+        NSArray *colors = [self.delegateAppearance calendar:self appearance:self.appearance eventColorsForDate:date];
+        if (colors) {
+            return colors;
+        }
+    }
     if (self.delegateAppearance && [self.delegateAppearance respondsToSelector:@selector(calendar:appearance:eventColorForDate:)]) {
         UIColor *color = [self.delegateAppearance calendar:self appearance:self.appearance eventColorForDate:date];
-        return color;
+        if (color) {
+            return color;
+        }
     }
     return nil;
 }
@@ -1854,6 +1908,9 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 
 - (NSDate *)minimumDateForCalendar
 {
+#if TARGET_INTERFACE_BUILDER
+    return [NSDate date];
+#else
     if (_dataSource && [_dataSource respondsToSelector:@selector(minimumDateForCalendar:)]) {
         _minimumDate = [self dateByIgnoringTimeComponentsOfDate:[_dataSource minimumDateForCalendar:self]];
     }
@@ -1861,10 +1918,14 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         _minimumDate = [self dateWithYear:1970 month:1 day:1];
     }
     return _minimumDate;
+#endif
 }
 
 - (NSDate *)maximumDateForCalendar
 {
+#if TARGET_INTERFACE_BUILDER
+    return [self dateByAddingMonths:4 toDate:[NSDate date]];
+#else
     if (_dataSource && [_dataSource respondsToSelector:@selector(maximumDateForCalendar:)]) {
         _maximumDate = [self dateByIgnoringTimeComponentsOfDate:[_dataSource maximumDateForCalendar:self]];
     }
@@ -1872,6 +1933,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         _maximumDate = [self dateWithYear:2099 month:12 day:31];
     }
     return _maximumDate;
+#endif
 }
 
 @end
@@ -2214,7 +2276,4 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 }
 
 @end
-
-
-
 
