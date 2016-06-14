@@ -9,21 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Bolts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FBSDKCoreKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FBSDKLoginKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>FSCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0EB19C1377A747F81110D44E2D5FCF78</key>
+		<key>1296D4F5B7C56E1AB244018D5DE2B171</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,27 +52,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>52D82BFDD1E808D9CB257431922C1EE4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6EDC37F3FA92533C6AC3562458AA91F1</key>
+		<key>8C9B5ADED0A2A087916AABA9F215122B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B2619B2813D910DBC9FE9714E0788D55</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C3E0730B7036BBF24DD7E917C062533D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E0D4B06A388692CE4D69B962AAB71CBE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

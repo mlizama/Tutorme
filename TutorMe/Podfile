@@ -10,8 +10,8 @@ target 'TutorMe' do
   pod 'SCLAlertView'
   pod 'FSCalendar'
   pod 'ActionSheetPicker-3.0'
- # pod 'Firebase'
-  pod 'FirebaseUI', '~> 0.4'
+  pod 'Firebase/Auth'
+  # pod 'FirebaseUI/Auth', '~> 0.4'
   target 'TutorMeTests' do
     inherit! :search_paths
     # Pods for testing

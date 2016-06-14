@@ -20,8 +20,6 @@
 		2B0EC0021C84E38500243EC6 /* TutorMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0011C84E38500243EC6 /* TutorMeTests.swift */; };
 		2B0EC00D1C84E38500243EC6 /* TutorMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC00C1C84E38500243EC6 /* TutorMeUITests.swift */; };
 		2B2CBB3B1D090574002EB522 /* logOut.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2CBB3A1D090574002EB522 /* logOut.png */; };
-		2B2CBB3F1D090BA7002EB522 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B2CBB3E1D090BA7002EB522 /* background3.png */; };
-		2B2CBB411D090C3F002EB522 /* background4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B2CBB401D090C3F002EB522 /* background4.jpg */; };
 		2B2CBB431D091155002EB522 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B2CBB421D091155002EB522 /* back.jpg */; };
 		2B2CBB471D091AA2002EB522 /* blackboard3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B2CBB461D091AA2002EB522 /* blackboard3.jpg */; };
 		2B4A65241D0AA50D002D1543 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B4A65231D0AA50D002D1543 /* GoogleService-Info.plist */; };
@@ -30,7 +28,6 @@
 		2B9EAF731CE04B0700E7B0C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */; };
 		2BC866761CE2EBF500054843 /* mySessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC866751CE2EBF500054843 /* mySessionsViewController.swift */; };
 		2BC866781CE3DC7A00054843 /* TutorCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC866771CE3DC7A00054843 /* TutorCalendarViewController.swift */; };
-		2BCBC1DA1D09F11200099123 /* 1465515986_AutoCAD S.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCBC1D91D09F11200099123 /* 1465515986_AutoCAD S.png */; };
 		2BFC31821CE50E4A00581385 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFC31811CE50E4A00581385 /* TJTextField.swift */; };
 		2BFC31841CE5170D00581385 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFC31831CE5170D00581385 /* background.png */; };
 		2BFC318A1CE518E700581385 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFC31891CE518E700581385 /* Profile.png */; };
@@ -82,8 +79,6 @@
 		2B0EC00C1C84E38500243EC6 /* TutorMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorMeUITests.swift; sourceTree = "<group>"; };
 		2B0EC00E1C84E38500243EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B2CBB3A1D090574002EB522 /* logOut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logOut.png; path = ../../../Downloads/logOut.png; sourceTree = "<group>"; };
-		2B2CBB3E1D090BA7002EB522 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background3.png; path = ../../../Downloads/background3.png; sourceTree = "<group>"; };
-		2B2CBB401D090C3F002EB522 /* background4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background4.jpg; path = ../../../Downloads/background4.jpg; sourceTree = "<group>"; };
 		2B2CBB421D091155002EB522 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = back.jpg; path = ../../back.jpg; sourceTree = "<group>"; };
 		2B2CBB461D091AA2002EB522 /* blackboard3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blackboard3.jpg; path = ../../blackboard3.jpg; sourceTree = "<group>"; };
 		2B4A65231D0AA50D002D1543 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -92,7 +87,6 @@
 		2B9EAF721CE04B0700E7B0C9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		2BC866751CE2EBF500054843 /* mySessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mySessionsViewController.swift; path = ../mySessionsViewController.swift; sourceTree = "<group>"; };
 		2BC866771CE3DC7A00054843 /* TutorCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorCalendarViewController.swift; sourceTree = "<group>"; };
-		2BCBC1D91D09F11200099123 /* 1465515986_AutoCAD S.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1465515986_AutoCAD S.png"; path = "../../../Downloads/1465515986_AutoCAD S.png"; sourceTree = "<group>"; };
 		2BFC31811CE50E4A00581385 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJTextField.swift; sourceTree = "<group>"; };
 		2BFC31831CE5170D00581385 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		2BFC31891CE518E700581385 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
@@ -151,10 +145,7 @@
 				2BFEC0181CA3CBE7004943CF /* signup.png */,
 				2B821F421CF15AB900D88025 /* logo.png */,
 				2B2CBB3A1D090574002EB522 /* logOut.png */,
-				2B2CBB401D090C3F002EB522 /* background4.jpg */,
-				2B2CBB3E1D090BA7002EB522 /* background3.png */,
 				2B2CBB461D091AA2002EB522 /* blackboard3.jpg */,
-				2BCBC1D91D09F11200099123 /* 1465515986_AutoCAD S.png */,
 				2B2CBB421D091155002EB522 /* back.jpg */,
 				2B0EBFEB1C84E38500243EC6 /* TutorMe */,
 				2B0EC0001C84E38500243EC6 /* TutorMeTests */,
@@ -364,8 +355,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BCBC1DA1D09F11200099123 /* 1465515986_AutoCAD S.png in Resources */,
-				2B2CBB3F1D090BA7002EB522 /* background3.png in Resources */,
 				2BFEC0171CA3CBD4004943CF /* signin.png in Resources */,
 				2BFC31841CE5170D00581385 /* background.png in Resources */,
 				2BFEC0191CA3CBE7004943CF /* signup.png in Resources */,
@@ -381,7 +370,6 @@
 				2BFC318C1CE5219300581385 /* add.png in Resources */,
 				2B2CBB431D091155002EB522 /* back.jpg in Resources */,
 				2B821F431CF15AB900D88025 /* logo.png in Resources */,
-				2B2CBB411D090C3F002EB522 /* background4.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
