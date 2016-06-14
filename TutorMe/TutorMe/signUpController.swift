@@ -8,6 +8,7 @@
 
 import UIKit
 import SCLAlertView
+import Firebase
 
 
 class signUpController: UIViewController, UITextFieldDelegate  {
@@ -16,8 +17,16 @@ class signUpController: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var password: UITextField!
     override func viewDidLoad() {
         //self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "blackboard3.png")!)
 
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        let image = UIImage(named: "blackboard3.jpg")
+        let background = UIImageView(image: image)
+        background.frame  = self.view.frame
+        self.view.addSubview(background)
+        self.view.sendSubviewToBack(background)
+        
+        self.view.backgroundColor = UIColor(patternImage: image!)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -31,8 +40,13 @@ class signUpController: UIViewController, UITextFieldDelegate  {
 
     @IBAction func signUp(sender: AnyObject) {
         
-                let username = self.userName.text;
-                let password = self.password.text;
+        let username = self.userName.text;
+        let password = self.password.text;
+        
+        if(password?.characters.count < 6){
+            return
+        }
+        
         
                 let url: NSURL = NSURL(string: "http://default-environment.s4mivgjgvz.us-east-1.elasticbeanstalk.com/signup.php")!
                 let request:NSMutableURLRequest = NSMutableURLRequest(URL:url)
@@ -62,18 +76,35 @@ class signUpController: UIViewController, UITextFieldDelegate  {
                                 if(!dataToReturn.isEmpty)
                                 {
                                     print(dataToReturn);
-                                    SCLAlertView().showNotice(
-                                        "Congratulations!", // Title of view
-                                        subTitle: "You are now signed up. Plese sign in using your new account.", // String of view
-                                        duration: 0.0, // Duration to show before closing automatically, default: 0.0
-                                        closeButtonTitle: "Done", // Optional button value, default: ""
-                                        colorStyle: 0x406c8f,
-                                        colorTextButton: 0xFFFFFF
-                                    ).setDismissBlock({                                    self.performSegueWithIdentifier("signUpBack", sender:sender);
-                                    //SCLAlertView().showNotice("Congratulations!", subTitle: "You are now signed up. Plese sign in using your new account.").setDismissBlock({                                    self.performSegueWithIdentifier("signUpBack", sender:sender);
-})
-
                                     
+                                    //Firebase creat new user
+                                    FIRAuth.auth()?.createUserWithEmail(username!, password: password!) { (user, error) in
+                                        if(error != nil){
+                                            
+                                            SCLAlertView().showError("Sorry!", subTitle: "Soryy unexpected error!")
+                                        }
+                                        else{
+                                            
+                                                SCLAlertView().showNotice(
+                                                "Congratulations!", // Title of view
+                                                subTitle: "You are now signed up. Plese sign in using your new account.", // String of view
+                                                duration: 0.0, // Duration to show before closing automatically, default: 0.0
+                                                closeButtonTitle: "Done", // Optional button value, default: ""
+                                                colorStyle: 0x406c8f,
+                                                colorTextButton: 0xFFFFFF
+                                                ).setDismissBlock({
+                                                    self.performSegueWithIdentifier("signUpBack", sender:sender);
+                                                    
+                                                })
+                                            
+                                            
+                                        }
+                                    }
+                                   
+                                    
+                                }
+                                else{
+                                    SCLAlertView().showError("Sorry!", subTitle: "User already exists!")
                                 }
                                 
                             }
@@ -81,6 +112,14 @@ class signUpController: UIViewController, UITextFieldDelegate  {
                 }
         
     }
+    
+    
+    @IBAction func goBack(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("signUpBack", sender:sender);
+        
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if textField == userName
         {

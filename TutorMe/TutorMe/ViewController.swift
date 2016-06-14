@@ -20,12 +20,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.username.backgroundColor =  UIColor.clearColor()
         self.username.tintColor = UIColor.blackColor()
+        self.username.textColor = UIColor.whiteColor()
         self.password.tintColor = UIColor.blackColor()
+        self.password.textColor = UIColor.whiteColor()
 
         //let swiftColor = UIColor(red: 24, green: 116, blue: 205, alpha: 1)
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
-        //self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
-        //self.view.backgroundColor = UIColor.grayColor();
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        let image = UIImage(named: "blackboard3.jpg")
+        let background = UIImageView(image: image)
+        background.frame  = self.view.frame
+        self.view.addSubview(background)
+        self.view.sendSubviewToBack(background)
+
+        self.view.backgroundColor = UIColor(patternImage: image!)
 
         //set the password text entry to show *'s instead of text
         password.secureTextEntry = true;
@@ -108,15 +115,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 {
                     SCLAlertView().showError("Please Try Again", subTitle: "Wrong user name or password")
 
-                    /*let alert = UIAlertController(title: "Sorry!", message:"Wrong username/password try again", preferredStyle: .Alert)
-                    let action = UIAlertAction(title: "OK", style: .Default) { _ in
-                        //code executed when user taps ok
-                        self.password.text = "";
-                        self.username.text = "";
-                    }
-                    alert.addAction(action)
-                    self.presentViewController(alert, animated: true){}
-                     */
                     
 
                 }

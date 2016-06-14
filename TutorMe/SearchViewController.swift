@@ -188,8 +188,17 @@ class SearchViewController: UIViewController,UITableViewDelegate, UITableViewDat
         self.searchCourse.layer.cornerRadius = 10
         self.table.layer.cornerRadius = 10
         //self.view.backgroundColor = UIColor(colorLiteralRed: 0.14, green: 0.48, blue: 0.66, alpha: 1);
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
 
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        let image = UIImage(named: "blackboard3.jpg")
+        let background = UIImageView(image: image)
+        background.frame  = self.view.frame
+        self.view.addSubview(background)
+        self.view.sendSubviewToBack(background)
+        
+        self.view.backgroundColor = UIColor(patternImage: image!)
+        
         self.table.delegate = self
         self.table.dataSource = self
         self.table.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")

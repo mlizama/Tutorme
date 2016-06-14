@@ -14,8 +14,7 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
     var data: [String] = [""]
     var dates: [String] = [""]
     var  dictionary: [String:Int]! = [:]
-
-    
+        
     @IBOutlet var goBack: UIButton!
     @IBOutlet var table: UITableView!
     
@@ -28,6 +27,16 @@ class CalendarTutorViewController: UIViewController, FSCalendarDelegate, FSCalen
         super.viewDidLoad()
         
         self.data.removeAll()
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        let image = UIImage(named: "blackboard3.jpg")
+        let background = UIImageView(image: image)
+        background.frame  = self.view.frame
+        self.view.addSubview(background)
+        self.view.sendSubviewToBack(background)
+        
+        self.view.backgroundColor = UIColor(patternImage: image!)
+
         self.goBack.backgroundColor = UIColor.whiteColor()
         //self.dismissViewControllerAnimated(true, completion: nil)
        // self.table.backgroundColor = UIColor.clearColor()

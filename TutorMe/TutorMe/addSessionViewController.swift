@@ -170,7 +170,15 @@ class addSessionViewController: UIViewController, FSCalendarDelegate, FSCalendar
         super.viewDidLoad()
         self.selectButton.hidden = true
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        let image = UIImage(named: "blackboard3.jpg")
+        let background = UIImageView(image: image)
+        background.frame  = self.view.frame
+        self.view.addSubview(background)
+        self.view.sendSubviewToBack(background)
+        
+        self.view.backgroundColor = UIColor(patternImage: image!)
 
         self.calendar.backgroundColor = UIColor.clearColor()
         self.calendar.delegate = self
